@@ -411,31 +411,7 @@ Variables
     }
   }
   
-  .banner-center {
-    background: linear-gradient(rgba(218, 10, 10, 0.7), rgb(0, 0, 0, 0.8)),
-      url('https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg')
-        center/cover;
   
-    height: 35vh;
-    padding: 1rem 1rem;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  
-  .banner-center p {
-    animation: slanty 10s linear 1;
-  }
-  
-  .banner-center h3 {
-    color: white;
-    text-align: ;
-  }
-  
-  .banner-btn {
-    background: black;
-    width: 50%;
-    text-align: center;
-  }
   
   .blog {
     background: rgba(255, 255, 255, 0.829);
@@ -450,10 +426,7 @@ Variables
   .blog-img {
     position: relative;
   }
-  .banner-center h3,
-  p {
-    max-width: 40rem;
-  }
+  
   .main-section {
     padding-top: 1rem;
   }
@@ -569,9 +542,6 @@ Variables
       width: 18rem;
     }
   
-    .banner-center {
-      height: 32vh;
-    }
     .info  {
     justify-content: space-between;
   }
@@ -608,20 +578,6 @@ Variables
     padding: 0.7rem 1rem;
   }
   
-  .sub-btn {
-    width: 100%;
-    margin-top: 1rem;
-  }
-  .sub-section {
-    width: 90vw;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 3rem 0;
-  }
-  
-  .subscribe-sec {
-    background: rgba(68, 63, 63, 0.7);
-  }
   
   .footer {
     background: var(--clr-black);
