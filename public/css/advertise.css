@@ -520,6 +520,20 @@ Variables
     padding-top: 2rem;
   }
   
+  .form-control {
+    width: 100%;
+    border: none;
+    
+  }
+
+  #sub-input {
+    margin: 1rem 0;
+  }
+  
+  .sub-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
   .close {
     display: none;
   }
