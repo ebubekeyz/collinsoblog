@@ -433,7 +433,15 @@ Variables
       padding: 0;
     }
   }
- 
+
+  .file {
+    width: 100%;
+    text-align: left
+  }
+ .file-input {
+    color: var(--clr-grey-10);
+    width: 100%;
+ }
     .banner-section {
         width: 90vw;
         max-width: var(--max-width);
