@@ -346,7 +346,7 @@ Variables
       color: white;
     }
     .menu a li:hover {
-      color: white;
+      color: var(--clr-primary-5);
     }
   
     .bars {

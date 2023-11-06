@@ -197,13 +197,63 @@ Variables
   Start
   ===============
   */
+  
+.user, .pass {
+    position: relative;
+  }
+
+  .reg {
+    color: white;
+  }
+  .reg a {
+    color:yellow;
+  }
+ 
+  .form-title p {
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: var(--spacing);
+    color: white;
+  }
+
+  .form-input {
+    width: 100%;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    background: #b6b8b9;
+    transition: var(--transition);
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-radius: 1rem;
+  }
+  
+  
+.form-control {
+    position: relative;
+    box-shadow: var(--dark-shadow);
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.2)
+  }
+  
+  .pass-icon, .user-icon {
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    right: 12px;
+    top: 14px;
+  }
   .top-header {
     background: var(--clr-black);
     color: var(--clr-grey-10);
     font-family: 'Courier New', Courier, monospace;
   }
   
-  .section-center {
+  .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -296,34 +346,6 @@ Variables
     color: black;
   }
   
-  .form-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2rem;
-  }
-  
-  .input-control {
-    width: 100%;
-    padding: 0.3rem 1rem;
-    border: none;
-    border-radius: 5rem;
-    margin-right: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 2rem;
-    display: none;
-    transition: var(--transition);
-  }
-  
-  .input-control:focus {
-    outline: none;
-  }
-  #submit {
-    font-size: 1.2rem;
-    padding-bottom: 2rem;
-    color: var(--clr-primary-3);
-    cursor: pointer;
-  }
   
   .socials {
     display: flex;
@@ -410,159 +432,58 @@ Variables
       padding: 0;
     }
   }
+
   
-  
-  
-  .blog {
-    background: rgba(255, 255, 255, 0.829);
-    box-shadow: var(--light-shadow);
-    border-radius: 1rem;
+  .banner-section {
+    width: 90vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background: var(--clr-grey-3);
+    padding: 3rem 2rem;
+    padding-bottom: 0.05rem;
     margin-bottom: 2rem;
-    transition: var(--transition);
+   
   }
   
-  
-  
-  .blog-img {
-    position: relative;
+  .banner-center {
+    background: rgba(138, 12, 12, 0.7);
+    padding: 5rem 1rem;
+   display: block;
+   text-align: center;
+   margin-bottom: 5rem;
+   margin-top: 3rem;
+  }
+
+  .banner-center a {
+    color: var(--clr-grey-7);
+    text-align: left;
+    margin-bottom: 2rem;
   }
   
-  .main-section {
-    padding-top: 1rem;
+  .banner-center p {
+    animation: slanty 10s linear 1;
+    color: var(--clr-grey-8);
   }
   
-  .main-img {
-    height: 15rem;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
-  
-  .inner {
-    padding: 1rem 1.5rem;
-  }
-  
-  .inner h3 {
-    font-weight: 700;
-  }
-  
-  .inner a {
-    color: var(--clr-grey-3);
-  }
-  
-  .tag {
-    background: var(--clr-primary-5);
+  .banner-center h3 {
     color: white;
-    padding: 0.7rem 0.7rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 10rem;
-    z-index: 2;
+    
+  }
+  
+  .banner-btn {
+    background: black;
+    width: 50%;
     text-align: center;
   }
   
-  .tag2 {
-    background: var(--clr-primary-5);
-    color: white;
-    padding: 0.7rem 0.7rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    display: none;
-  }
   
-  .blog-img::after {
-    content: '';
-    background: linear-gradient(rgba(11, 11, 12, 0.7), rgb(0, 0, 0, 0.8));
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    transition: var(--transition);
-  }
-  .blog-img:hover::after {
-    background: linear-gradient(rgba(11, 11, 12, 0.9), rgb(0, 0, 0, 0.9));
-  }
-  article:hover .tag2 {
-    display: block;
-  }
-  article:hover .tag {
-    animation: slant 2s linear 1;
-  }
-  
-  .info p,
-  span,
+  .banner-center h3,
   p {
-    padding-right: 1rem;
-    color: var(--clr-grey-6);
+    max-width: 100%;
+    max-width: 50rem;
+   margin: 0 auto;
   }
   
-  .main-center {
-    display: block;
-  }
-  
-  .main-title {
-    text-align: center;
-    color: white;
-    border-bottom: 2px solid var(--clr-primary-1);
-    width: 10rem;
-    margin: 0 auto;
-    padding-bottom: 0.7rem;
-    transition: var(--transition);
-  }
-  
-  .main-title:hover {
-    animation: slant 2s linear 1;
-  }
-  .main-title2 {
-    text-align: center;
-    color: white;
-    border-bottom: 2px solid var(--clr-primary-1);
-    width: 16rem;
-    margin: 0 auto;
-    padding-bottom: 0.7rem;
-  }
-  
-  
-  
-  @media Screen and (min-width: 800px) {
-    .main-center {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  
-    .main-title2 {
-      width: 18rem;
-    }
-  
-    .info  {
-    justify-content: space-between;
-  }
-  
-    .inner {
-        padding: 1rem 1rem;
-    }
-    .blog {
-      background: var(--clr-grey-9);
-      flex: 0 calc(33.3% - 1rem);
-      margin: 0 1rem;
-    }
-  
-    .main-img {
-      height: 15rem;
-      border-radius: none;
-    }
-    .blog-img::after {
-      border-radius: none;
-    }
-  }
   
   .form-group2 {
     display: block;
@@ -578,6 +499,20 @@ Variables
     padding: 0.7rem 1rem;
   }
   
+  .sub-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .sub-section {
+    width: 90vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  
+  .subscribe-sec {
+    background: rgba(68, 63, 63, 0.7);
+  }
   
   .footer {
     background: var(--clr-black);
@@ -636,6 +571,42 @@ Variables
   }
   
   
+  .home {
+    width: 90vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .home a {
+    color: white;
+    padding-top: 2rem;
+  }
+  
+
+
+  .form-control {
+    width: 100%;
+    border: none;
+    background: var(--clr-grey-9);
+    
+    
+  }
+  .form {
+    max-width: 40rem;
+    margin: 2rem auto;
+    margin-bottom: 11.4rem;
+    text-align: center;
+
+  }
+
+  #sub-input {
+    margin: 1rem 0;
+  }
+  
+  .sub-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
   .close {
     display: none;
   }
