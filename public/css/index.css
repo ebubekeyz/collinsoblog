@@ -610,7 +610,7 @@ article:hover .tag2 {
 }
 
 .footer-info li {
-  margin: 0.9rem 2rem;
+  margin: 0.9rem 0.7rem;
   transition: var(--transition);
 }
 
