@@ -84,6 +84,10 @@ app.get('/blog', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/blog.html'))
 })
 
+app.get('/single-blog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/single-blog.html'))
+})
+
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
