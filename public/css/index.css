@@ -61,7 +61,7 @@ body {
     url('https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg')
       center/cover;
   width: 100%;
-  height: 230vh;
+  height: 100%;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
