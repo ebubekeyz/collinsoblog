@@ -6,6 +6,8 @@ const app = express();
 
 const connectDB = require('./db/connect');
 
+const path = require('path');
+
 const fileUpload = require('express-fileupload');
 
 //Routers
@@ -53,6 +55,19 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/user', userRouter)
 app.use('/api/v1/article', articleRouter)
 app.use('/api/v1/comment', commentRouter)
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/about.html'))
+})
+app.get('/privacy', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/privacy.html'))
+})
+app.get('/advertise', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/advertise.html'))
+})
+app.get('/contact', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/contact.html'))
+})
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
