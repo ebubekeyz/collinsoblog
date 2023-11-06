@@ -523,6 +523,7 @@ Variables
   .form-control {
     width: 100%;
     border: none;
+    background: var(--clr-grey-9);
     
   }
 
@@ -533,6 +534,7 @@ Variables
 
   #sub-input {
     margin: 1rem 0;
+    background: var(--clr-grey-9);
   }
   
   .sub-btn {
