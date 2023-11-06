@@ -15,6 +15,8 @@ const authRouter = require('./routes/authRoutes')
 const userRouter = require('./routes/userRoutes')
 const articleRouter = require('./routes/articleRoutes')
 const commentRouter = require('./routes/commentRoutes')
+const contactRouter = require('./routes/contactRoutes')
+const advertRouter = require('./routes/advertRoutes')
 
 const xss = require('xss-clean');
 const rateLimiter = require('express-rate-limit');
@@ -55,6 +57,8 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/user', userRouter)
 app.use('/api/v1/article', articleRouter)
 app.use('/api/v1/comment', commentRouter)
+app.use('/api/v1/contact', contactRouter)
+app.use('/api/v1/advert', advertRouter)
 
 app.get('/about', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/about.html'))
