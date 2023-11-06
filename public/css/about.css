@@ -391,6 +391,12 @@ Variables
    margin-bottom: 5rem;
    margin-top: 3rem;
   }
+
+  .banner-center a {
+    color: var(--clr-grey-7);
+    text-align: left;
+    margin-bottom: 2rem;
+  }
   
   .banner-center p {
     animation: slanty 10s linear 1;
@@ -502,6 +508,17 @@ Variables
     }
   }
   
+  
+  .home {
+    width: 90vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .home a {
+    color: white;
+    padding-top: 2rem;
+  }
   
   .close {
     display: none;
