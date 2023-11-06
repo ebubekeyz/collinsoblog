@@ -252,6 +252,7 @@ Start
 
 .bars {
   font-size: 1.5rem;
+  cursor: pointer
 }
 
 .logo {
@@ -541,6 +542,10 @@ p {
     flex-wrap: wrap;
   }
 
+  .main-title2 {
+    width: 18rem;
+  }
+
   .banner-center {
     height: 32vh;
   }
@@ -615,4 +620,14 @@ p {
 
 .footer-info li:hover {
   color: yellow;
+}
+
+
+.close {
+  display: none;
+}
+
+
+.show {
+  display: block;
 }
