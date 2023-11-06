@@ -413,7 +413,7 @@ Start
     url('https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg')
       center/cover;
 
-  height: 32vh;
+  height: 40vh;
   padding: 1rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -425,7 +425,7 @@ Start
 
 .banner-btn {
   background: black;
- 
+  width: 50%;
   text-align: center;
 }
 
