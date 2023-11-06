@@ -412,7 +412,7 @@ Start
   background: linear-gradient(rgba(218, 10, 10, 0.7), rgb(0, 0, 0, 0.8)),
     url('https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg')
       center/cover;
- 
+
   height: 32vh;
   padding: 1rem 1rem;
   display: grid;
@@ -439,7 +439,8 @@ Start
 .blog-img {
   position: relative;
 }
-.banner-center h3, p {
+.banner-center h3,
+p {
   max-width: 40rem;
 }
 .main-section {
@@ -472,7 +473,6 @@ Start
   bottom: 0;
   left: 0;
   z-index: 2;
-  
 }
 
 .tag2 {
@@ -501,17 +501,18 @@ Start
   transition: var(--transition);
 }
 article:hover .tag2 {
-  
   display: block;
 }
 
-.info p, span, p {
+.info p,
+span,
+p {
   padding-right: 1rem;
   color: var(--clr-grey-6);
 }
 
 .main-center {
-   display: block;
+  display: block;
 }
 
 .main-title {
@@ -526,12 +527,12 @@ article:hover .tag2 {
   text-align: center;
   color: white;
   border-bottom: 2px solid var(--clr-primary-1);
-  width: 18rem;
+  width: 16rem;
   margin: 0 auto;
   padding-bottom: 0.7rem;
 }
 
-@media Screen and (min-width: 800px){
+@media Screen and (min-width: 800px) {
   .main-center {
     display: flex;
     justify-content: space-between;
@@ -541,10 +542,7 @@ article:hover .tag2 {
   .blog {
     background: none;
     flex: 0 calc(50% - 1rem);
-   
   }
-
-  
 
   .main-img {
     height: 15rem;
@@ -554,8 +552,6 @@ article:hover .tag2 {
     border-radius: none;
   }
 }
-
-
 
 .form-group2 {
   display: block;
@@ -584,16 +580,13 @@ article:hover .tag2 {
 
 .subscribe-sec {
   background: rgba(68, 63, 63, 0.7);
-  
 }
-
 
 .footer {
   background: var(--clr-black);
   color: var(--clr-grey-10);
   font-family: 'Courier New', Courier, monospace;
   padding-top: 1rem;
-  
 }
 .footer-center {
   text-align: center;
