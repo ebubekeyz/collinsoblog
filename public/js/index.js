@@ -13,3 +13,11 @@ closeBtn.addEventListener('click', () => {
     barsBtn.style.display = 'block'
     deskDOM.classList.remove('show')
 })
+
+
+const submitBtn = document.querySelector('#submit');
+const inputControl = document.querySelector('.input-control')
+
+submitBtn.addEventListener('click', () => {
+    inputControl.classList.add('show')
+})

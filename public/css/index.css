@@ -271,8 +271,9 @@ Start
 }
 
 .desk {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(238, 11, 11, 0.3);
   display: none;
+  transition: var(--transition);
 }
 
 .menu {
@@ -280,20 +281,19 @@ Start
 }
 
 .menu li {
-  border-bottom: 2px solid var(--clr-primary-4);
+  border-bottom: 2px solid white;
   padding: 1rem 0;
   transition: var(--transition);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700;
 }
 
 .menu a {
-  color: var(--clr-grey-1);
+  color: var(--clr-grey-10);
 }
 
 .menu a li:hover {
-  background: var(--clr-primary-1);
-  color: white;
+  background: var(--clr-grey-10);
+  color: black;
 }
 
 .form-group {
@@ -311,6 +311,8 @@ Start
   margin-right: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-bottom: 2rem;
+  display: none;
+  transition: var(--transition);
 }
 
 .input-control:focus {
@@ -319,7 +321,7 @@ Start
 #submit {
   font-size: 1.2rem;
   padding-bottom: 2rem;
-  color: var(--clr-primary-5);
+  color: var(--clr-primary-3);
   cursor: pointer;
 }
 
@@ -336,8 +338,8 @@ Start
   font-size: 1.2rem;
 }
 
-.socials a {
-  color: var(--clr-primary-5);
+.socials a span {
+  color: white;
 }
 @media screen and (min-width: 800px) {
   .socials a {
