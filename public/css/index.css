@@ -444,9 +444,7 @@ Start
   transition: var(--transition);
 }
 
-.blog:hover {
-  transform: skewX(2deg);
-}
+
 
 .blog-img {
   position: relative;
