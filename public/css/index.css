@@ -425,7 +425,7 @@ Start
 
 .banner-btn {
   background: black;
-  width: 30%;
+ 
   text-align: center;
 }
 
@@ -531,6 +531,8 @@ p {
   margin: 0 auto;
   padding-bottom: 0.7rem;
 }
+
+
 
 @media Screen and (min-width: 800px) {
   .main-center {
