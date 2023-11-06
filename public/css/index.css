@@ -526,7 +526,7 @@ article:hover .tag2 {
   text-align: center;
   color: white;
   border-bottom: 2px solid var(--clr-primary-1);
-  width: 22rem;
+  width: 18rem;
   margin: 0 auto;
   padding-bottom: 0.7rem;
 }
@@ -610,7 +610,7 @@ article:hover .tag2 {
 }
 
 .footer-info li {
-  margin: 0.9rem 0.7rem;
+  margin: 0.9rem 0.6rem;
   transition: var(--transition);
 }
 
