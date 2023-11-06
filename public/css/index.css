@@ -414,7 +414,7 @@ Start
     url('https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg')
       center/cover;
 
-  height: 40vh;
+  height: 35vh;
   padding: 1rem 1rem;
   display: grid;
   grid-template-columns: 1fr;

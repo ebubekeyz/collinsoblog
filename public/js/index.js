@@ -3,13 +3,13 @@ const closeBtn = document.querySelector('#close');
 const deskDOM = document.querySelector('.desk')
 
 barsBtn.addEventListener('click', () => {
-    deskDOM.classList.add('show');
+    deskDOM.classList.toggle('show');
     barsBtn.style.display = 'none';
-    closeBtn.classList.add('show')
+    closeBtn.classList.toggle('show')
 })
 
 closeBtn.addEventListener('click', () => {
-    closeBtn.style.display = 'none'
+    closeBtn.classList.remove('show')
     barsBtn.style.display = 'block'
-    deskDOM.style.display = 'none'
+    deskDOM.classList.remove('show')
 })
