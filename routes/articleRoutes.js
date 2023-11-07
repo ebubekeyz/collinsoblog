@@ -17,7 +17,7 @@ router.route('/uploadImageCloud').post(uploadImageCloud)
 router.route('/singleUserArticle').get(authenticateUser, getSingleUserArticle)
 router
 .route('/')
-.post(authenticateUser, createArticle).get([authenticateUser], getAllArticle)
+.post(authenticateUser, createArticle).get(getAllArticle)
 router.route('/:id')
 .get(getSingleArticle)
 .patch([authenticateUser, authenticatePermissions('admin', 'owner')],updateArticle)

@@ -14,7 +14,10 @@ const createArticle = async(req, res) => {
 }
 
 const getAllArticle = async(req, res) => {
-    const article = await Article.find({})
+    const article = await Article.find({}).populate({
+        path: 'user',
+        select: 'name email phone tiktok facebook image'
+    })
     res.status(StatusCodes.OK).json({article, count: article.length})
 }
 
