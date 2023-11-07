@@ -10,6 +10,8 @@ const path = require('path');
 
 const fileUpload = require('express-fileupload');
 
+const cors = require('cors')
+
 //Routers
 const authRouter = require('./routes/authRoutes')
 const userRouter = require('./routes/userRoutes')
@@ -50,7 +52,10 @@ app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 
 app.use(express.static('./public'));
+
 app.use(fileUpload({ useTempFiles: true }));
+
+app.use(cors({credentials: true}));
 
 //Routers
 app.use('/api/v1/auth', authRouter)

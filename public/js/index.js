@@ -21,3 +21,27 @@ const inputControl = document.querySelector('.input-control')
 submitBtn.addEventListener('click', () => {
     inputControl.classList.add('show')
 })
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', async() => {
+    try {
+        const response = await fetch(`/api/v1/article`, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "apllication/json"
+            }
+        })
+
+        const data = await response.json()
+        const article = data.article
+
+        console.log(article)
+    }
+    catch(error){
+        console.log(error)
+    }
+})
+

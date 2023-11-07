@@ -106,28 +106,28 @@
 
                 <div class="fields">
                     <div class="user">
-                        <input type="text" placeholder="Name" class="form-input" id="username">
+                        <input type="text" placeholder="Name" class="form-input" id="name">
                         <span class="user-icon"><i class="fas fa-user"></i></span>
                     </div>
 
                     <div class="fields">
                         <div class="user">
-                            <input type="text" placeholder="Email" class="form-input" id="username">
+                            <input type="text" placeholder="Email" class="form-input" id="email">
                             <span class="user-icon"><i class="fas fa-envelope"></i></span>
                         </div>
 
                         <div class="pass">
-                            <input type="text" class="form-input" id="password" placeholder="Phone Number">
+                            <input type="text" class="form-input" id="phone" placeholder="Phone Number">
                             <span class="pass-icon" id="pass-icon"><i class="fas fa-phone"></i></span>
                         </div>
 
                         <div class="pass">
-                            <input type="text" class="form-input" id="password" placeholder="Facebook Link">
+                            <input type="text" class="form-input" id="facebook" placeholder="Facebook Link">
                             <span class="pass-icon" id="pass-icon"><i class="fab fa-facebook"></i></span>
                         </div>
 
                         <div class="pass">
-                            <input type="text" class="form-input" id="password" placeholder="Tiktok Link">
+                            <input type="text" class="form-input" id="tiktok" placeholder="Tiktok Link">
                             <span class="pass-icon" id="pass-icon"><i class="fab fa-tiktok"></i></span>
                         </div>
 
@@ -141,12 +141,12 @@
 
                         <div class="file">
                             <p>Upload Your Image</p>
-                            <input type="file" class="file-input" placeholder="Password">
+                            <input type="file" class="file-input" placeholder="Password" accept="image/*" id="image">
                         </div>
 
 
                         <button type="submit" class="sub-btn btn" id="sub-btn">
-                            Login
+                            Register
                         </button>
 
                         <span class="reg"><a href="/login">Login</a> if you already have an account</span>
@@ -181,6 +181,13 @@
             </ul>
         </div>
     </div>
+
+
+    <!-- axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+  integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+  crossorigin="anonymous"
+></script>
 
     <script src="./js/register.js" type="module"></script>
 </body>

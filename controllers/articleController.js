@@ -69,7 +69,7 @@ const uploadImageCloud = async(req, res) => {
             use_filename: true, folder: 'collinsoblog',
         }
     )
-    console.log(result)
+    
     fs.unlinkSync(req.files.image.tempFilePath)
     return res.status(StatusCodes.OK).json({image: {src: result.secure_url}})
 }
