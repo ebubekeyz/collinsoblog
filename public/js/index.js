@@ -15,12 +15,12 @@ closeBtn.addEventListener('click', () => {
 })
 
 
-const submitBtn = document.querySelector('#submit');
-const inputControl = document.querySelector('.input-control')
+// const submitBtn = document.querySelector('#submit');
+// const inputControl = document.querySelector('.input-control')
 
-submitBtn.addEventListener('click', () => {
-    inputControl.classList.add('show')
-})
+// submitBtn.addEventListener('click', () => {
+//     inputControl.classList.add('show')
+// })
 
 
 

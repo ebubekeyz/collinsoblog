@@ -265,7 +265,8 @@ Start
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  margin: 2rem auto;
+  margin: 0 auto;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   height: 4rem;
 }
@@ -416,7 +417,7 @@ Start
     url('https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg')
       center/cover;
 
-  height: 35vh;
+
   padding: 1rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
