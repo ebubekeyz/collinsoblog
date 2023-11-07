@@ -38,6 +38,15 @@ window.addEventListener('DOMContentLoaded', async() => {
         const data = await response.json()
         const article = data.article
 
+        const titleDOM = document.querySelector('#title')
+        const titleDescDOM = document.querySelector('#title-desc')
+        const bannerCenDOM = document.querySelector('.banner-center')
+
+        console.log(article.length)
+        titleDOM.innerHTML = `<a href="/single-blog?id=${article[article.length - 1]._id}">${article[article.length - 1].title}</a>`
+        titleDescDOM.innerHTML = `<p id="title-desc">${article[article.length - 1].description.slice(0, 150)}.......</p>`
+        
+
        
 
         const newsFilter = article.filter((news) => {
