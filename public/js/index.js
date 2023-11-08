@@ -1,3 +1,27 @@
+const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+  const weekdays = [
+    'Sun',
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thur',
+    'Fri',
+    'Sat',
+  ];
+
 const barsBtn = document.querySelector('#bars');
 const closeBtn = document.querySelector('#close');
 const deskDOM = document.querySelector('.desk')
@@ -23,6 +47,15 @@ closeBtn.addEventListener('click', () => {
 // })
 
 
+let date3 = new Date()
+const footerYearDOM = document.querySelector('.footer-year')
+const footerYear = date3.getFullYear()
+date3 = date3.toLocaleString()
+footerYearDOM.textContent = footerYear;
+
+const timeDOM = document.querySelector('.time')
+
+timeDOM.innerHTML = `<li>${date3}</li>`
 
 
 
@@ -110,6 +143,14 @@ window.addEventListener('DOMContentLoaded', async() => {
         const eventsLength = eventsFilter.length - 1
         const eventsLength2 = eventsFilter.length - 2
 
+        console.log(eventsFilter[eventsLength].createdAt)
+        const eventDate = eventsFilter[eventsLength].createdAt
+
+
+
+        let date2 = new Date(eventDate)
+        
+
         const mainCenterDOM = document.querySelector('.main-center')
         const moneyDOM = document.querySelector('#make-money')
         const insuranceDOM = document.querySelector('#insurance')
@@ -127,7 +168,7 @@ window.addEventListener('DOMContentLoaded', async() => {
               alt="blog-img"
             />
 
-            <span class="tag">${newsFilter[newsLength].category}</span>
+            <span class="tag">${newsFilter[newsLength].category.toUpperCase()}</span>
             <a href="/single-blog?id=${newsFilter[newsLength]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
@@ -140,7 +181,7 @@ window.addEventListener('DOMContentLoaded', async() => {
 
             <div class="info">
               <p>${newsFilter[newsLength].user.name}</p>
-              <span><i class="fas fa-comment"></i><span>0</span></span>
+             
               <p>Nov 16th, 2023</p>
             </div>
           </div>
@@ -154,7 +195,7 @@ window.addEventListener('DOMContentLoaded', async() => {
               alt="blog-img"
             />
 
-            <span class="tag">${newsFilter[newsLength2].category}</span>
+            <span class="tag">${newsFilter[newsLength2].category.toUpperCase()}</span>
             <a href="/single-blog?id=${newsFilter[newsLength2]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
@@ -167,7 +208,7 @@ window.addEventListener('DOMContentLoaded', async() => {
 
             <div class="info">
               <p>${newsFilter[newsLength2].user.name}</p>
-              <span><i class="fas fa-comment"></i><span>0</span></span>
+              
               <p>Nov 16th, 2023</p>
             </div>
           </div>
@@ -185,7 +226,7 @@ window.addEventListener('DOMContentLoaded', async() => {
               alt="blog-img"
             />
 
-            <span class="tag">${moneyFilter[moneyLength].category}</span>
+            <span class="tag">${moneyFilter[moneyLength].category.toUpperCase()}</span>
             <a href="/single-blog?id=${moneyFilter[moneyLength]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
@@ -198,7 +239,7 @@ window.addEventListener('DOMContentLoaded', async() => {
 
             <div class="info">
               <p>${moneyFilter[moneyLength].user.name}</p>
-              <span><i class="fas fa-comment"></i><span>0</span></span>
+              
               <p>Nov 16th, 2023</p>
             </div>
           </div>
@@ -212,7 +253,7 @@ window.addEventListener('DOMContentLoaded', async() => {
               alt="blog-img"
             />
 
-            <span class="tag">${moneyFilter[moneyLength2].category}</span>
+            <span class="tag">${moneyFilter[moneyLength2].category.toUpperCase()}</span>
             <a href="/single-blog?id=${moneyFilter[moneyLength2]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
@@ -225,7 +266,7 @@ window.addEventListener('DOMContentLoaded', async() => {
 
             <div class="info">
               <p>${moneyFilter[moneyLength2].user.name}</p>
-              <span><i class="fas fa-comment"></i><span>0</span></span>
+              
               <p>Nov 16th, 2023</p>
             </div>
           </div>
@@ -244,7 +285,7 @@ window.addEventListener('DOMContentLoaded', async() => {
               alt="blog-img"
             />
 
-            <span class="tag">${insuranceFilter[insuranceLength].category}</span>
+            <span class="tag">${insuranceFilter[insuranceLength].category.toUpperCase()}</span>
             <a href="/single-blog?id=${insuranceFilter[insuranceLength]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
@@ -257,7 +298,7 @@ window.addEventListener('DOMContentLoaded', async() => {
 
             <div class="info">
               <p>${insuranceFilter[insuranceLength].user.name}</p>
-              <span><i class="fas fa-comment"></i><span>0</span></span>
+              
               <p>Nov 16th, 2023</p>
             </div>
           </div>
@@ -271,7 +312,7 @@ window.addEventListener('DOMContentLoaded', async() => {
               alt="blog-img"
             />
 
-            <span class="tag">${insuranceFilter[insuranceLength2].category}</span>
+            <span class="tag">${insuranceFilter[insuranceLength2].category.toUpperCase()}</span>
             <a href="/single-blog?id=${insuranceFilter[insuranceLength2]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
@@ -284,7 +325,7 @@ window.addEventListener('DOMContentLoaded', async() => {
 
             <div class="info">
               <p>${insuranceFilter[insuranceLength2].user.name}</p>
-              <span><i class="fas fa-comment"></i><span>0</span></span>
+              
               <p>Nov 16th, 2023</p>
             </div>
           </div>
@@ -302,7 +343,7 @@ window.addEventListener('DOMContentLoaded', async() => {
                alt="blog-img"
              />
  
-             <span class="tag">${foodbankFilter[foodbankLength].category}</span>
+             <span class="tag">${foodbankFilter[foodbankLength].category.toUpperCase()}</span>
              <a href="/single-blog?id=${foodbankFilter[foodbankLength]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
@@ -315,7 +356,7 @@ window.addEventListener('DOMContentLoaded', async() => {
  
              <div class="info">
                <p>${foodbankFilter[foodbankLength].user.name}</p>
-               <span><i class="fas fa-comment"></i><span>0</span></span>
+               
                <p>Nov 16th, 2023</p>
              </div>
            </div>
@@ -329,7 +370,7 @@ window.addEventListener('DOMContentLoaded', async() => {
                alt="blog-img"
              />
  
-             <span class="tag">${foodbankFilter[foodbankLength2].category}</span>
+             <span class="tag">${foodbankFilter[foodbankLength2].category.toUpperCase()}</span>
              <a href="/single-blog?id=${foodbankFilter[foodbankLength2]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
@@ -342,7 +383,7 @@ window.addEventListener('DOMContentLoaded', async() => {
  
              <div class="info">
                <p>${foodbankFilter[foodbankLength2].user.name}</p>
-               <span><i class="fas fa-comment"></i><span>0</span></span>
+               
                <p>Nov 16th, 2023</p>
              </div>
            </div>
@@ -361,7 +402,7 @@ window.addEventListener('DOMContentLoaded', async() => {
                alt="blog-img"
              />
  
-             <span class="tag">${foodbankFilter[foodbankLength].category}</span>
+             <span class="tag">${foodbankFilter[foodbankLength].category.toUpperCase()}</span>
              <a href="/single-blog?id=${fintechFilter[fintechLength]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
@@ -374,7 +415,7 @@ window.addEventListener('DOMContentLoaded', async() => {
  
              <div class="info">
                <p>${fintechFilter[fintechLength].user.name}</p>
-               <span><i class="fas fa-comment"></i><span>0</span></span>
+               
                <p>Nov 16th, 2023</p>
              </div>
            </div>
@@ -388,7 +429,7 @@ window.addEventListener('DOMContentLoaded', async() => {
                alt="blog-img"
              />
  
-             <span class="tag">${fintechFilter[fintechLength2].category}</span>
+             <span class="tag">${fintechFilter[fintechLength2].category.toUpperCase()}</span>
              <a href="/single-blog?id=${fintechFilter[fintechLength2]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
@@ -401,7 +442,7 @@ window.addEventListener('DOMContentLoaded', async() => {
  
              <div class="info">
                <p>${fintechFilter[fintechLength2].user.name}</p>
-               <span><i class="fas fa-comment"></i><span>0</span></span>
+               
                <p>Nov 16th, 2023</p>
              </div>
            </div>
@@ -421,7 +462,7 @@ window.addEventListener('DOMContentLoaded', async() => {
                alt="blog-img"
              />
  
-             <span class="tag">${foodbankFilter[foodbankLength].category}</span>
+             <span class="tag">${eventsFilter[eventsLength].category.toUpperCase()}</span>
              <a href="/single-blog?id=${eventsFilter[eventsLength]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
@@ -434,7 +475,7 @@ window.addEventListener('DOMContentLoaded', async() => {
  
              <div class="info">
                <p>${eventsFilter[eventsLength].user.name}</p>
-               <span><i class="fas fa-comment"></i><span>0</span></span>
+              
                <p>Nov 16th, 2023</p>
              </div>
            </div>
@@ -448,7 +489,7 @@ window.addEventListener('DOMContentLoaded', async() => {
                alt="blog-img"
              />
  
-             <span class="tag">${eventsFilter[eventsLength2].category}</span>
+             <span class="tag">${eventsFilter[eventsLength2].category.toUpperCase()}</span>
              <a href="/single-blog?id=${eventsFilter[eventsLength2]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
@@ -461,7 +502,7 @@ window.addEventListener('DOMContentLoaded', async() => {
  
              <div class="info">
                <p>${eventsFilter[eventsLength2].user.name}</p>
-               <span><i class="fas fa-comment"></i><span>0</span></span>
+              
                <p>Nov 16th, 2023</p>
              </div>
            </div>

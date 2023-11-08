@@ -231,8 +231,7 @@ Start
 .time li {
   margin-left: 1rem;
   font-weight: 700;
-  color: yellow;
-  animation: change 2s linear infinite;
+  color: var(--clr-grey-9);
 }
 
 @keyframes change {
