@@ -70,8 +70,55 @@ window.addEventListener('DOMContentLoaded', async() => {
         })
 
         const data = await response.json()
-        let article = data.article
+        const article = data.article
 
+        const eventFilter = article.filter((products) => {
+            if(products.category === 'products'){
+                return products
+            }
+        })
+        console.log(eventFilter)
+
+        const eventDOM = document.querySelector('#products')
+        eventDOM.innerHTML = eventFilter.map((events) => {
+            let {_id:id, title, description, image, category, user:{name: name}, createdAt} = events
+
+           let eventDate = new Date(createdAt)
+           
+        let eventMonth = eventDate.getMonth()
+        eventMonth = months[eventMonth]
+        const eventYear = eventDate.getFullYear()
+        const eventDay = eventDate.getDate()
+        console.log(eventMonth, eventDay, eventYear)
+      
+            return `
+            <article class="blog">
+          <div class="blog-img">
+            <img
+              src="${image}"
+              class="main-img img"
+              alt="blog-img"
+            />
+
+            <span class="tag">${category.toUpperCase()}</span>
+            <a href="/single-blog?id=${id}" class="tag2 main-btn btn">Read More</a>
+          </div>
+
+          <div class="inner">
+            <a href="/single-blog?id=${id}"
+              ><h3>
+                ${title}
+              </h3></a
+            >
+
+            <div class="info">
+              <p>${name}</p>
+              <p>${eventMonth} ${eventDay}, ${eventYear}</p>
+            </div>
+          </div>
+        </article>
+            `
+        } ).join()
         
 
     }
