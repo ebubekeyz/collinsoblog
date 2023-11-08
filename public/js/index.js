@@ -638,3 +638,38 @@ window.addEventListener('DOMContentLoaded', async() => {
 
 
 
+const subInput = document.querySelector('#sub-input2')
+const form = document.querySelector('.form-group2')
+const subBtn = document.querySelector('#sub-btn2')
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault()
+  const message = subInput.value
+  try {
+    subBtn.innerHTML = `<div class="loading"></div>`
+    const response = await fetch(`/api/v1/subscribe`, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({message}),
+    })
+
+    const data = await response.json()
+    console.log(data)
+    if(response.status === 201){
+        subInput.value = '';
+       
+        subBtn.textContent = 'Subscription Successful'
+    }
+    else {
+        subBtn.textContent = data.msg
+        subBtn.textContent = 'Subscribe'
+    }
+
+    
+}
+catch(error){
+    console.log(error)
+}
+})
