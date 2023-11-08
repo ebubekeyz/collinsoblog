@@ -69,24 +69,30 @@ window.addEventListener('DOMContentLoaded', async() => {
         })
 
         const data = await response.json()
-        const article = data.article
+        let article = data.article
 
         const titleDOM = document.querySelector('#title')
         const titleDescDOM = document.querySelector('#title-desc')
         const bannerCenDOM = document.querySelector('.banner-center')
 
-        console.log(article.length)
+      
         titleDOM.innerHTML = `<a href="/single-blog?id=${article[article.length - 1]._id}">${article[article.length - 1].title}</a>`
         titleDescDOM.innerHTML = `<p id="title-desc">${article[article.length - 1].description.slice(0, 150)}.......</p>`
         
 
        
 
-        const newsFilter = article.filter((news) => {
+        let newsFilter = article.filter((news) => {
             if(news.category === 'news'){
                 return news
             }
         })
+
+        // const newsFilterStore = localStorage.setItem("newsFilter", newsFilter)
+        // console.log(newsFilterStore)
+
+        // newsFilter = localStorage.getItem('newsFilter')
+        // console.log(newsFilter)
 
         const moneyFilter = article.filter((news) => {
             if(news.category === 'makemoney'){
@@ -143,12 +149,121 @@ window.addEventListener('DOMContentLoaded', async() => {
         const eventsLength = eventsFilter.length - 1
         const eventsLength2 = eventsFilter.length - 2
 
-        console.log(eventsFilter[eventsLength].createdAt)
         const eventDate = eventsFilter[eventsLength].createdAt
 
+        const newsDate = newsFilter[newsLength].createdAt
+
+        const insuranceDate = insuranceFilter[eventsLength].createdAt
+
+        const foodbankDate = foodbankFilter[foodbankLength].createdAt
+
+        const moneyDate = moneyFilter[moneyLength].createdAt
 
 
-        let date2 = new Date(eventDate)
+        const eventDate2 = eventsFilter[eventsLength2].createdAt
+
+        const newsDate2 = newsFilter[newsLength2].createdAt
+
+        const insuranceDate2 = insuranceFilter[eventsLength2].createdAt
+
+        const foodbankDate2 = foodbankFilter[foodbankLength2].createdAt
+
+        const moneyDate2 = moneyFilter[moneyLength2].createdAt
+
+        const fintechDate = fintechFilter[fintechLength].createdAt
+
+        const fintechDate2 = fintechFilter[fintechLength2].createdAt
+
+
+
+        let eventD = new Date(eventDate)
+        let eMonth = eventD.getMonth()
+        eMonth = months[eMonth]
+        const eYear = eventD.getFullYear()
+        const eDate = eventD.getDate()
+      
+
+        let eventD2 = new Date(eventDate2)
+        let eMonth2 = eventD2.getMonth()
+        eMonth2 = months[eMonth2]
+        const eYear2 = eventD2.getFullYear()
+        const eDate2 = eventD2.getDate()
+        
+        
+        let insuranceD = new Date(insuranceDate)
+        let iMonth = insuranceD.getMonth()
+        iMonth = months[iMonth]
+        const iYear = insuranceD.getFullYear()
+        const iDate = insuranceD.getDate()
+        
+
+        let insuranceD2 = new Date(insuranceDate2)
+        let iMonth2 = insuranceD2.getMonth()
+        iMonth2 = months[iMonth2]
+        const iYear2 = insuranceD2.getFullYear()
+        const iDate2 = insuranceD2.getDate()
+       
+
+        let foodbankD = new Date(foodbankDate)
+        let fMonth = foodbankD.getMonth()
+        fMonth = months[fMonth]
+        console.log(fMonth)
+        const fYear = foodbankD.getFullYear()
+        const fDate = foodbankD.getDate()
+       
+
+        let foodbankD2 = new Date(foodbankDate2)
+        let fMonth2 = foodbankD2.getMonth()
+        fMonth2 = months[fMonth2]
+        console.log(fMonth2)
+        const fYear2 = foodbankD2.getFullYear()
+        const fDate2 = foodbankD2.getDate()
+        
+        
+
+        let fintechD = new Date(fintechDate)
+        let fintechMonth = fintechD.getMonth()
+        fintechMonth = months[fintechMonth]
+        const fintechYear = fintechD.getFullYear()
+        const fintechDat = fintechD.getDate()
+        
+
+        let fintechD2 = new Date(fintechDate2)
+        let fintechMonth2 = fintechD2.getMonth()
+        fintechMonth2 = months[fintechMonth2]
+        const fintechYear2 = fintechD2.getFullYear()
+        const fintechDat2 = fintechD2.getDate()
+        
+
+        let moneyD = new Date(moneyDate)
+        let mMonth = moneyD.getMonth()
+        mMonth = months[mMonth]
+        const mYear = moneyD.getFullYear()
+        const mDate = moneyD.getDate()
+       
+
+        let moneyD2 = new Date(moneyDate2)
+        let mMonth2 = moneyD2.getMonth()
+        mMonth2 = months[mMonth2]
+        const mYear2 = moneyD2.getFullYear()
+        const mDate2 = moneyD2.getDate()
+        
+
+        let newsD = new Date(newsDate)
+        let nMonth = newsD.getMonth()
+        nMonth = months[nMonth]
+        console.log(nMonth)
+        const nYear = newsD.getFullYear()
+        const nDate = newsD.getDate()
+        
+
+        let newsD2 = new Date(newsDate2)
+        let nMonth2 = newsD2.getMonth()
+        nMonth2 = months[nMonth2]
+        console.log(nMonth2)
+        const nYear2 = newsD2.getFullYear()
+        const nDate2 = newsD2.getDate()
+        
         
 
         const mainCenterDOM = document.querySelector('.main-center')
@@ -182,7 +297,7 @@ window.addEventListener('DOMContentLoaded', async() => {
             <div class="info">
               <p>${newsFilter[newsLength].user.name}</p>
              
-              <p>Nov 16th, 2023</p>
+              <p>${nMonth} ${nDate}, ${nYear}</p>
             </div>
           </div>
         </article>
@@ -209,7 +324,7 @@ window.addEventListener('DOMContentLoaded', async() => {
             <div class="info">
               <p>${newsFilter[newsLength2].user.name}</p>
               
-              <p>Nov 16th, 2023</p>
+              <p>${nMonth2} ${nDate2}, ${nYear2}</p>
             </div>
           </div>
         </article>
@@ -240,7 +355,7 @@ window.addEventListener('DOMContentLoaded', async() => {
             <div class="info">
               <p>${moneyFilter[moneyLength].user.name}</p>
               
-              <p>Nov 16th, 2023</p>
+              <p>${mMonth} ${mDate}, ${mYear}</p>
             </div>
           </div>
         </article>
@@ -267,7 +382,7 @@ window.addEventListener('DOMContentLoaded', async() => {
             <div class="info">
               <p>${moneyFilter[moneyLength2].user.name}</p>
               
-              <p>Nov 16th, 2023</p>
+              <p>${mMonth2} ${mDate2}, ${mYear2}</p>
             </div>
           </div>
         </article>
@@ -299,7 +414,7 @@ window.addEventListener('DOMContentLoaded', async() => {
             <div class="info">
               <p>${insuranceFilter[insuranceLength].user.name}</p>
               
-              <p>Nov 16th, 2023</p>
+              <p>${iMonth} ${iDate}, ${iYear}</p>
             </div>
           </div>
         </article>
@@ -326,7 +441,7 @@ window.addEventListener('DOMContentLoaded', async() => {
             <div class="info">
               <p>${insuranceFilter[insuranceLength2].user.name}</p>
               
-              <p>Nov 16th, 2023</p>
+              <p>${iMonth2} ${iDate2}, ${iYear2}</p>
             </div>
           </div>
         </article>
@@ -357,7 +472,7 @@ window.addEventListener('DOMContentLoaded', async() => {
              <div class="info">
                <p>${foodbankFilter[foodbankLength].user.name}</p>
                
-               <p>Nov 16th, 2023</p>
+               <p>${fMonth} ${fDate}, ${fYear}</p>
              </div>
            </div>
          </article>
@@ -384,7 +499,7 @@ window.addEventListener('DOMContentLoaded', async() => {
              <div class="info">
                <p>${foodbankFilter[foodbankLength2].user.name}</p>
                
-               <p>Nov 16th, 2023</p>
+               <p>${fMonth2} ${fDate2}, ${fYear2}</p>
              </div>
            </div>
          </article>
@@ -416,7 +531,7 @@ window.addEventListener('DOMContentLoaded', async() => {
              <div class="info">
                <p>${fintechFilter[fintechLength].user.name}</p>
                
-               <p>Nov 16th, 2023</p>
+               <p>${fintechMonth} ${fintechDat}, ${fintechYear}</p>
              </div>
            </div>
          </article>
@@ -443,7 +558,7 @@ window.addEventListener('DOMContentLoaded', async() => {
              <div class="info">
                <p>${fintechFilter[fintechLength2].user.name}</p>
                
-               <p>Nov 16th, 2023</p>
+               <p>${fintechMonth2} ${fintechDat2}, ${fintechYear2}</p>
              </div>
            </div>
          </article>
@@ -476,7 +591,7 @@ window.addEventListener('DOMContentLoaded', async() => {
              <div class="info">
                <p>${eventsFilter[eventsLength].user.name}</p>
               
-               <p>Nov 16th, 2023</p>
+               <p>${eMonth} ${eDate}, ${eYear}</p>
              </div>
            </div>
          </article>
@@ -503,7 +618,7 @@ window.addEventListener('DOMContentLoaded', async() => {
              <div class="info">
                <p>${eventsFilter[eventsLength2].user.name}</p>
               
-               <p>Nov 16th, 2023</p>
+               <p>${eMonth2} ${eDate2}, ${eYear2}</p>
              </div>
            </div>
          </article>
