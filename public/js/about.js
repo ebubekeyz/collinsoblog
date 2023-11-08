@@ -14,3 +14,12 @@ closeBtn.addEventListener('click', () => {
     deskDOM.classList.remove('show')
 })
 
+let date3 = new Date()
+const footerYearDOM = document.querySelector('.footer-year')
+const footerYear = date3.getFullYear()
+date3 = date3.toLocaleString()
+footerYearDOM.textContent = footerYear;
+
+const timeDOM = document.querySelector('.time')
+
+timeDOM.innerHTML = `<li>${date3}</li>`

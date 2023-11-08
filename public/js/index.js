@@ -207,7 +207,7 @@ window.addEventListener('DOMContentLoaded', async() => {
         let foodbankD = new Date(foodbankDate)
         let fMonth = foodbankD.getMonth()
         fMonth = months[fMonth]
-        console.log(fMonth)
+        
         const fYear = foodbankD.getFullYear()
         const fDate = foodbankD.getDate()
        
@@ -215,7 +215,7 @@ window.addEventListener('DOMContentLoaded', async() => {
         let foodbankD2 = new Date(foodbankDate2)
         let fMonth2 = foodbankD2.getMonth()
         fMonth2 = months[fMonth2]
-        console.log(fMonth2)
+       
         const fYear2 = foodbankD2.getFullYear()
         const fDate2 = foodbankD2.getDate()
         
@@ -252,7 +252,7 @@ window.addEventListener('DOMContentLoaded', async() => {
         let newsD = new Date(newsDate)
         let nMonth = newsD.getMonth()
         nMonth = months[nMonth]
-        console.log(nMonth)
+      
         const nYear = newsD.getFullYear()
         const nDate = newsD.getDate()
         
@@ -260,7 +260,7 @@ window.addEventListener('DOMContentLoaded', async() => {
         let newsD2 = new Date(newsDate2)
         let nMonth2 = newsD2.getMonth()
         nMonth2 = months[nMonth2]
-        console.log(nMonth2)
+       
         const nYear2 = newsD2.getFullYear()
         const nDate2 = newsD2.getDate()
         
@@ -635,4 +635,6 @@ window.addEventListener('DOMContentLoaded', async() => {
         console.log(error)
     }
 })
+
+
 

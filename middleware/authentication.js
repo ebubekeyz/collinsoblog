@@ -5,7 +5,8 @@ const authenticateUser = async(req, res, next) => {
     const token = req.signedCookies.token
 
     if(!token){
-        throw new CustomError.UnauthenticatedError('Authentication Invalid')
+        // throw new CustomError.UnauthenticatedError('Authentication Invalid')
+        res.redirect('/login')
     } 
     try{
         const {name, email, userId, phone, image, facebook, tiktok, role} = isTokenValid({token})
@@ -13,7 +14,8 @@ const authenticateUser = async(req, res, next) => {
         next()
 
     } catch(error){
-        throw new CustomError.UnauthenticatedError('Authentication Invalid')
+        // throw new CustomError.UnauthenticatedError('Authentication Invalid')
+        res.redirect('/login')
     }
     
 }
@@ -29,7 +31,8 @@ const authenticateUser = async(req, res, next) => {
 const authenticatePermissions = (...role) => {
     return (req, res, next) => {
         if(!role.includes(req.user.role)){
-            throw new CustomError.UnauthorizedError('Not Permitted')
+            // throw new CustomError.UnauthorizedError('Not Permitted')
+            res.redirect('/login')
         }
         next()
     }

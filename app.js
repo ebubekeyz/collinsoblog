@@ -6,6 +6,8 @@ const app = express();
 
 const connectDB = require('./db/connect');
 
+const {authenticateUser, authenticatePermissions} = require('./middleware/authentication')
+
 const path = require('path');
 
 const fileUpload = require('express-fileupload');
@@ -91,6 +93,30 @@ app.get('/blog', (req, res) => {
 
 app.get('/single-blog', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/single-blog.html'))
+})
+app.get('/newsBlog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/newsBlog.html'))
+})
+app.get('/fintechBlog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/fintechBlog.html'))
+})
+app.get('/insuranceBlog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/insuranceBlog.html'))
+})
+app.get('/eventBlog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/eventBlog.html'))
+})
+app.get('/productBlog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/productBlog.html'))
+})
+app.get('/foodBlog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/foodBlog.html'))
+})
+app.get('/moneyBlog', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/moneyBlog.html'))
+})
+app.get('/bankBlog', authenticateUser, (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/bankBlog.html'))
 })
 
 app.use(notFoundMiddleware);
