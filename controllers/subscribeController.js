@@ -1,9 +1,14 @@
-const Subscribe = require('../models/Comment')
+const Subscribe = require('../models/Subscribe')
 const CustomError = require('../errors')
 const { StatusCodes } = require('http-status-codes')
 
 
 const createSubscribe = async(req, res) => {
+    const {message} = req.body
+    const emailAlreadyExist = await Subscribe.findOne({message})
+    if(emailAlreadyExist){
+        throw new CustomError.BadRequestError('Email already exist')
+    }
     const subscribe = await Subscribe.create(req.body)
     res.status(StatusCodes.CREATED).json({subscribe})
 }
