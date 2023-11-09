@@ -98,6 +98,7 @@ const getArticle = async() => {
 
         
 
+       if(response.status === 200){
         const titleDOM = document.querySelector('.title')
 
         bannerImgDOM.innerHTML = `<img src="${image}"class="banner-image img" alt=""> `
@@ -105,6 +106,9 @@ const getArticle = async() => {
         titleDOM.textContent = title
         descDOM.textContent = description
 
+        window.reload()
+
+       }
         
         
         
