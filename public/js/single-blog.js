@@ -61,8 +61,10 @@ const params2 = window.location.search
 const urlID = new URLSearchParams(params2).get('id')
 
 
-
-window.addEventListener('DOMContentLoaded', async() => {
+window.addEventListener('load', () => {
+    window.localStorage.clear()
+})
+const getArticle = async() => {
     try {
         const response = await fetch(`/api/v1/article/${urlID}`, {
             method: 'GET',
@@ -87,8 +89,9 @@ window.addEventListener('DOMContentLoaded', async() => {
         const bannerImgDOM = document.querySelector('.banner-img')
 
         articleInput.value = id
+       
         let articleId = articleInput.value = id
-
+        console.log(articleId)
        const idStore = localStorage.setItem('articleId', articleId)
 
 
@@ -110,7 +113,12 @@ window.addEventListener('DOMContentLoaded', async() => {
     catch(error){
         console.log(error)
     }
-})
+}
+
+getArticle()
+// window.addEventListener('DOMContentLoaded', async() => {
+   
+// })
 
 
 const commentInput = document.querySelector('#comment-input')
@@ -128,7 +136,7 @@ commentBtn.addEventListener('click', async (e) => {
 
     const message = commentInput.value
     const article = articleInput.value
-    
+
 
     try {
 
@@ -142,9 +150,12 @@ commentBtn.addEventListener('click', async (e) => {
         })
         const data = await response.json()
 
+        
+
         if(response.status === 201){
             commentInput.value = ''
             commentBtn.textContent = 'comment'
+            
             location.reload()
         }
         else{
@@ -154,12 +165,20 @@ commentBtn.addEventListener('click', async (e) => {
     } 
     catch(error){
         console.log(error)
+        commentBtn.textContent = 'comment failed'
+        window.location = '/login'
     }
 })
 
 
-    window.addEventListener('DOMContentLoaded', async() => {
+//     window.addEventListener('DOMContentLoaded', async() => {
+    
+// })
+
+
+const mapComment = async() => {
     const artId = localStorage.getItem('articleId')
+   
  
     console.log(artId)
     try {
@@ -212,4 +231,6 @@ commentBtn.addEventListener('click', async (e) => {
     catch(error){
         console.log(error)
     }
-})
+}
+
+mapComment()
