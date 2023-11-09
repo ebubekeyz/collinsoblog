@@ -59,12 +59,14 @@ window.addEventListener('DOMContentLoaded', async () => {
     const data = await response.json();
     const article = data.article;
 
+    console.log(article);
+
     const eventFilter = article.filter((products) => {
       if (products.category === 'products') {
         return products;
       }
     });
-    console.log(eventFilter);
+    
 
     const eventDOM = document.querySelector('#products');
     eventDOM.innerHTML = eventFilter
@@ -85,7 +87,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         eventMonth = months[eventMonth];
         const eventYear = eventDate.getFullYear();
         const eventDay = eventDate.getDate();
-        console.log(eventMonth, eventDay, eventYear);
+        
 
         return `
             <article class="blog">
