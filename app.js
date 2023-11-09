@@ -93,8 +93,8 @@ app.get('/blog', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/blog.html'))
 })
 
-app.get('/single-blog', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './public/single-blog.html'))
+app.get('/single-article', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/single-article.html'))
 })
 app.get('/newsBlog', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/newsBlog.html'))

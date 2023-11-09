@@ -61,7 +61,10 @@ const deleteComment = async (req, res) => {
 
 const getSingleArticleComment = async (req, res) => {
     const {id:articleId} = req.params
-    const comment = await Comment.find({article: articleId})
+    const comment = await Comment.find({article: articleId}).populate({
+        path: 'user',
+        select: 'name email phone tiktok facebook image'
+    }).sort('-createdAt')
     res.status(StatusCodes.OK).json({comment, count: comment.length})
 }
 

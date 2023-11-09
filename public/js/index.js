@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', async() => {
         const bannerCenDOM = document.querySelector('.banner-center')
 
       
-        titleDOM.innerHTML = `<a href="/single-blog?id=${article[article.length - 1]._id}">${article[article.length - 1].title}</a>`
+        titleDOM.innerHTML = `<a href="/single-article?id=${article[article.length - 1]._id}">${article[article.length - 1].title}</a>`
         titleDescDOM.innerHTML = `<p id="title-desc">${article[article.length - 1].description.slice(0, 150)}.......</p>`
         
 
@@ -284,11 +284,11 @@ window.addEventListener('DOMContentLoaded', async() => {
             />
 
             <span class="tag">${newsFilter[newsLength].category.toUpperCase()}</span>
-            <a href="/single-blog?id=${newsFilter[newsLength]._id}" class="tag2 main-btn btn">Read More</a>
+            <a href="/single-article?id=${newsFilter[newsLength]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
           <div class="inner">
-            <a href="/single-blog?id=${newsFilter[newsLength]._id}"
+            <a href="/single-article?id=${newsFilter[newsLength]._id}"
               ><h3>
                 ${newsFilter[newsLength].title}
               </h3></a
@@ -311,11 +311,11 @@ window.addEventListener('DOMContentLoaded', async() => {
             />
 
             <span class="tag">${newsFilter[newsLength2].category.toUpperCase()}</span>
-            <a href="/single-blog?id=${newsFilter[newsLength2]._id}" class="tag2 main-btn btn">Read More</a>
+            <a href="/single-article?id=${newsFilter[newsLength2]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
           <div class="inner">
-            <a href="/single-blog?id=${newsFilter[newsLength2]._id}"
+            <a href="/single-article?id=${newsFilter[newsLength2]._id}"
               ><h3>
               ${newsFilter[newsLength2].title}
               </h3></a
@@ -342,11 +342,11 @@ window.addEventListener('DOMContentLoaded', async() => {
             />
 
             <span class="tag">${moneyFilter[moneyLength].category.toUpperCase()}</span>
-            <a href="/single-blog?id=${moneyFilter[moneyLength]._id}" class="tag2 main-btn btn">Read More</a>
+            <a href="/single-article?id=${moneyFilter[moneyLength]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
           <div class="inner">
-            <a href="/single-blog?id=${moneyFilter[moneyLength]._id}"
+            <a href="/single-article?id=${moneyFilter[moneyLength]._id}"
               ><h3>
                 ${moneyFilter[moneyLength].title}
               </h3></a
@@ -369,11 +369,11 @@ window.addEventListener('DOMContentLoaded', async() => {
             />
 
             <span class="tag">${moneyFilter[moneyLength2].category.toUpperCase()}</span>
-            <a href="/single-blog?id=${moneyFilter[moneyLength2]._id}" class="tag2 main-btn btn">Read More</a>
+            <a href="/single-article?id=${moneyFilter[moneyLength2]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
           <div class="inner">
-            <a href="/single-blog?id=${moneyFilter[moneyLength2]._id}"
+            <a href="/single-article?id=${moneyFilter[moneyLength2]._id}"
               ><h3>
               ${moneyFilter[moneyLength2].title}
               </h3></a
@@ -401,11 +401,11 @@ window.addEventListener('DOMContentLoaded', async() => {
             />
 
             <span class="tag">${insuranceFilter[insuranceLength].category.toUpperCase()}</span>
-            <a href="/single-blog?id=${insuranceFilter[insuranceLength]._id}" class="tag2 main-btn btn">Read More</a>
+            <a href="/single-article?id=${insuranceFilter[insuranceLength]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
           <div class="inner">
-            <a href="/single-blog?id=${insuranceFilter[insuranceLength]._id}"
+            <a href="/single-article?id=${insuranceFilter[insuranceLength]._id}"
               ><h3>
                 ${insuranceFilter[insuranceLength].title}
               </h3></a
@@ -428,11 +428,11 @@ window.addEventListener('DOMContentLoaded', async() => {
             />
 
             <span class="tag">${insuranceFilter[insuranceLength2].category.toUpperCase()}</span>
-            <a href="/single-blog?id=${insuranceFilter[insuranceLength2]._id}" class="tag2 main-btn btn">Read More</a>
+            <a href="/single-article?id=${insuranceFilter[insuranceLength2]._id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
           <div class="inner">
-            <a href="/single-blog?id=${insuranceFilter[insuranceLength2]._id}"
+            <a href="/single-article?id=${insuranceFilter[insuranceLength2]._id}"
               ><h3>
               ${insuranceFilter[insuranceLength2].title}
               </h3></a
@@ -459,11 +459,11 @@ window.addEventListener('DOMContentLoaded', async() => {
              />
  
              <span class="tag">${foodbankFilter[foodbankLength].category.toUpperCase()}</span>
-             <a href="/single-blog?id=${foodbankFilter[foodbankLength]._id}" class="tag2 main-btn btn">Read More</a>
+             <a href="/single-article?id=${foodbankFilter[foodbankLength]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
            <div class="inner">
-             <a href="/single-blog?id=${foodbankFilter[foodbankLength]._id}"
+             <a href="/single-article?id=${foodbankFilter[foodbankLength]._id}"
                ><h3>
                  ${foodbankFilter[foodbankLength].title}
                </h3></a
@@ -486,11 +486,11 @@ window.addEventListener('DOMContentLoaded', async() => {
              />
  
              <span class="tag">${foodbankFilter[foodbankLength2].category.toUpperCase()}</span>
-             <a href="/single-blog?id=${foodbankFilter[foodbankLength2]._id}" class="tag2 main-btn btn">Read More</a>
+             <a href="/single-article?id=${foodbankFilter[foodbankLength2]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
            <div class="inner">
-             <a href="/single-blog?id=${foodbankFilter[foodbankLength2]._id}"
+             <a href="/single-article?id=${foodbankFilter[foodbankLength2]._id}"
                ><h3>
                ${foodbankFilter[foodbankLength2].title}
                </h3></a
@@ -518,11 +518,11 @@ window.addEventListener('DOMContentLoaded', async() => {
              />
  
              <span class="tag">${foodbankFilter[foodbankLength].category.toUpperCase()}</span>
-             <a href="/single-blog?id=${fintechFilter[fintechLength]._id}" class="tag2 main-btn btn">Read More</a>
+             <a href="/single-article?id=${fintechFilter[fintechLength]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
            <div class="inner">
-             <a href="/single-blog?id=${fintechFilter[fintechLength]._id}"
+             <a href="/single-article?id=${fintechFilter[fintechLength]._id}"
                ><h3>
                  ${fintechFilter[fintechLength].title}
                </h3></a
@@ -545,11 +545,11 @@ window.addEventListener('DOMContentLoaded', async() => {
              />
  
              <span class="tag">${fintechFilter[fintechLength2].category.toUpperCase()}</span>
-             <a href="/single-blog?id=${fintechFilter[fintechLength2]._id}" class="tag2 main-btn btn">Read More</a>
+             <a href="/single-article?id=${fintechFilter[fintechLength2]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
            <div class="inner">
-             <a href="/single-blog?id=${fintechFilter[fintechLength2]._id}"
+             <a href="/single-article?id=${fintechFilter[fintechLength2]._id}"
                ><h3>
                ${fintechFilter[fintechLength2].title}
                </h3></a
@@ -578,11 +578,11 @@ window.addEventListener('DOMContentLoaded', async() => {
              />
  
              <span class="tag">${eventsFilter[eventsLength].category.toUpperCase()}</span>
-             <a href="/single-blog?id=${eventsFilter[eventsLength]._id}" class="tag2 main-btn btn">Read More</a>
+             <a href="/single-article?id=${eventsFilter[eventsLength]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
            <div class="inner">
-             <a href="/single-blog?id=${eventsFilter[eventsLength]._id}"
+             <a href="/single-article?id=${eventsFilter[eventsLength]._id}"
                ><h3>
                  ${eventsFilter[eventsLength].title}
                </h3></a
@@ -605,11 +605,11 @@ window.addEventListener('DOMContentLoaded', async() => {
              />
  
              <span class="tag">${eventsFilter[eventsLength2].category.toUpperCase()}</span>
-             <a href="/single-blog?id=${eventsFilter[eventsLength2]._id}" class="tag2 main-btn btn">Read More</a>
+             <a href="/single-article?id=${eventsFilter[eventsLength2]._id}" class="tag2 main-btn btn">Read More</a>
            </div>
  
            <div class="inner">
-             <a href="/single-blog?id=${eventsFilter[eventsLength2]._id}"
+             <a href="/single-article?id=${eventsFilter[eventsLength2]._id}"
                ><h3>
                ${eventsFilter[eventsLength2].title}
                </h3></a

@@ -101,11 +101,11 @@ window.addEventListener('DOMContentLoaded', async() => {
             />
 
             <span class="tag">${category.toUpperCase()}</span>
-            <a href="/single-blog?id=${id}" class="tag2 main-btn btn">Read More</a>
+            <a href="/single-article?id=${id}" class="tag2 main-btn btn">Read More</a>
           </div>
 
           <div class="inner">
-            <a href="/single-blog?id=${id}"
+            <a href="/single-article?id=${id}"
               ><h3>
                 ${title}
               </h3></a
