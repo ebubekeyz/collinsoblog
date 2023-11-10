@@ -626,7 +626,9 @@ p {
   text-align: center;
   margin: 0 auto;
 }
-
+#submit a {
+  color: white;
+}
 .footer-info {
   display: flex;
   justify-content: center;
