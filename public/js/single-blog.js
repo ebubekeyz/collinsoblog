@@ -198,9 +198,8 @@ const mapComment = async () => {
                 <p class="date">${commentMonth} ${commentDay}, ${commentYear}</p>
                 <p class="comment">${message}</p>
             </div>
-            `;
-      })
-      .join();
+            `
+      }).join();
   } catch (error) {
     console.log(error);
   }
