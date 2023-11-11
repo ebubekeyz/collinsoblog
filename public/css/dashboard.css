@@ -208,6 +208,8 @@ Variables
         background: var(--clr-white);
         box-shadow: var(--light-shadow);
       }
+
+     
       .nav-header {
         display: flex;
         align-items: center;
@@ -244,8 +246,16 @@ Variables
         color: var(--clr-primary-5);
         padding-left: 1.5rem;
       }
+
+      .nav-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        height: 4rem;
+      }
       .social-icons {
-        display: none;
+        display: flex;
       }
       .links {
         height: 0;

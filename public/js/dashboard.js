@@ -598,3 +598,41 @@ const foodbankFunc = async () => {
   };
   
  foodbankFunc();
+
+
+ const showImg = async () => {
+    try{
+        const response = await fetch('/api/v1/user/showMe', {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
+        const data = await response.json()
+
+        const user = data.user
+        console.log(user)
+
+        const {image} = user
+
+        const navImage = document.querySelectorAll('#nav-img')
+
+        navImage.forEach((nav) => {
+            nav.innerHTML = `
+            <img src="${image}"
+            class="nav-img img" alt="">
+            `
+        })
+
+
+        
+    }
+
+    catch(error){
+        console.log(error)
+    }
+ }
+
+
+ showImg()

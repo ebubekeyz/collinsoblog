@@ -66,6 +66,15 @@ subBtn.addEventListener('click', async (e) => {
       subBtn.textContent = data.msg;
       subBtn.textContent = 'Login';
     }
+
+
+    if(data.user.role === 'owner' || data.user.role === 'admin'){
+      window.location = '/dashboard'
+    }
+
+    if(body.user.role === 'user'){
+      window.location = '/'
+    }
   } catch (error) {
     console.log(error);
   }
