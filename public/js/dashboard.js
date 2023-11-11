@@ -28,6 +28,9 @@ const titleBtn = document.querySelector('.title')
 const navToggle = document.querySelector('.nav-toggle')
 const leftMenu = document.querySelector('.left-menu')
 
+
+const width = window.innerWidth
+
 navToggle.addEventListener('click', () => {
     leftMenu.classList.toggle('show')
     mainBDOM.classList.toggle('remove')
@@ -35,17 +38,7 @@ navToggle.addEventListener('click', () => {
 
 
 
-titleBtn.addEventListener('click',() => {
-    mainBDOM.style.display = 'block'
-    pBodyDOM.style.display = 'none'
-    mBodyDOM.style.display = 'none'
-    bBodyDOM.style.display = 'none'
-    iBodyDOM.style.display = 'none'
-    fBodyDOM.style.display = 'none'
-    fiBodyDOM.style.display = 'none'
-    eBodyDOM.style.display = 'none'
-    nBodyDOM.style.display = 'none'
-})
+
 
 newsBtn.addEventListener('click',() => {
     mainBDOM.style.display = 'none'
@@ -57,6 +50,10 @@ newsBtn.addEventListener('click',() => {
     fiBodyDOM.style.display = 'none'
     eBodyDOM.style.display = 'none'
     nBodyDOM.style.display = 'block'
+
+
+
+    
 })
 
 moneyBtn.addEventListener('click',() => {
@@ -239,8 +236,7 @@ const articleFunc = async () => {
              <p>${idnum}.</p>  
         <p>
         ${title.toUpperCase()}</p>
-        <p class="cat">
-        ${category.toUpperCase()}</p>
+       
          <a href="/edit-post?id=${id}"><span><i class="fas fa-pen"></i></span></a>
          <a href="/dashboard?id=${id}"><span><i class="fas fa-trash"></i></span></a>
      </div>
@@ -290,8 +286,7 @@ const articleFunc = async () => {
              <p>${idnum}.</p>  
         <p>
         ${title.toUpperCase()}</p>
-        <p class="cat">
-        ${category.toUpperCase()}</p>
+       
          <a href="/edit-post?id=${id}"><span><i class="fas fa-pen"></i></span></a>
          <a href="/dashboard?id=${id}"><span><i class="fas fa-trash"></i></span></a>
      </div>
@@ -340,8 +335,7 @@ const articleFunc = async () => {
              <p>${idnum}.</p>  
         <p>
         ${title.toUpperCase()}</p>
-        <p class="cat">
-        ${category.toUpperCase()}</p>
+       
          <a href="/edit-post?id=${id}"><span><i class="fas fa-pen"></i></span></a>
          <a href="/dashboard?id=${id}"><span><i class="fas fa-trash"></i></span></a>
      </div>
@@ -391,8 +385,7 @@ const articleFunc = async () => {
              <p>${idnum}.</p>  
         <p>
         ${title.toUpperCase()}</p>
-        <p class="cat">
-        ${category.toUpperCase()}</p>
+       
          <a href="/edit-post?id=${id}"><span><i class="fas fa-pen"></i></span></a>
          <a href="/dashboard?id=${id}"><span><i class="fas fa-trash"></i></span></a>
      </div>
@@ -441,8 +434,7 @@ const articleFunc = async () => {
              <p>${idnum}.</p>  
         <p>
         ${title.toUpperCase()}</p>
-        <p class="cat">
-        ${category.toUpperCase()}</p>
+       
          <a href="/edit-post?id=${id}"><span><i class="fas fa-pen"></i></span></a>
          <a href="/dashboard?id=${id}"><span><i class="fas fa-trash"></i></span></a>
      </div>
@@ -492,8 +484,7 @@ const articleFunc = async () => {
              <p>${idnum}.</p>  
         <p>
         ${title.toUpperCase()}</p>
-        <p class="cat">
-        ${category.toUpperCase()}</p>
+        
          <a href="/edit-post?id=${id}"><span><i class="fas fa-pen"></i></span></a>
          <a href="/dashboard?id=${id}"><span><i class="fas fa-trash"></i></span></a>
      </div>
@@ -541,8 +532,7 @@ const fintechFunc = async () => {
              <p>${idnum}.</p>  
         <p>
         ${title.toUpperCase()}</p>
-        <p class="cat">
-        ${category.toUpperCase()}</p>
+       
          <a href="/edit-post?id=${id}"><span><i class="fas fa-pen"></i></span></a>
          <a href="/dashboard?id=${id}"><span><i class="fas fa-trash"></i></span></a>
      </div>
@@ -591,8 +581,7 @@ const foodbankFunc = async () => {
              <p>${idnum}.</p>  
         <p>
         ${title.toUpperCase()}</p>
-        <p class="cat">
-        ${category.toUpperCase()}</p>
+       
          <a href="/edit-post?id=${id}"><span><i class="fas fa-pen"></i></span></a>
          <a href="/dashboard?id=${id}"><span><i class="fas fa-trash"></i></span></a>
      </div>
