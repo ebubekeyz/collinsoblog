@@ -43,9 +43,9 @@ const footerYear = date3.getFullYear();
 date3 = date3.toLocaleString();
 footerYearDOM.textContent = footerYear;
 
-const timeDOM = document.querySelector('.time');
+const timeDOM = document.querySelector('.time2');
 
-timeDOM.innerHTML = `<li>${date3}</li>`;
+// timeDOM.innerHTML = `<li>${date3}</li>`;
 
 window.addEventListener('DOMContentLoaded', async () => {
   try {
