@@ -22,4 +22,4 @@ footerYearDOM.textContent = footerYear;
 
 const timeDOM = document.querySelector('.time');
 
-timeDOM.innerHTML = `<li>${date3}</li>`;
+// timeDOM.innerHTML = `<li>${date3}</li>`;
