@@ -349,8 +349,9 @@ Variables
       
       }
       .main-body {
+        background: var(--clr-grey-9);
         padding: 1rem;
-       
+        width: 100vw;
       }
 
       #n-body {
@@ -395,7 +396,9 @@ Variables
         color: white;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        width: 50vw;
+        width: 100vw;
+        text-align: center;
+        display: none;
       }
 .table .cat {
     font-weight: 700;
@@ -416,15 +419,25 @@ Variables
         }
         .left-menu {
             width:20rem;
+            display: block;
         }
         .main-body {
             width: 80vw;
             background: var(--clr-grey-9);
             padding: 1rem;
+            display: block;
            
         }
         .table {
             
         grid-template-columns: 2% 78% 10% 5% 5%;
         }
+      }
+
+
+      .remove {
+        display: none;
+      }
+      .show {
+        display: block;
       }

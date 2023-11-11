@@ -25,6 +25,13 @@ const bBodyDOM = document.querySelector('#b-body')
 const pBodyDOM = document.querySelector('#p-body')
 const eBodyDOM = document.querySelector('#e-body')
 const titleBtn = document.querySelector('.title')
+const navToggle = document.querySelector('.nav-toggle')
+const leftMenu = document.querySelector('.left-menu')
+
+navToggle.addEventListener('click', () => {
+    leftMenu.classList.toggle('show')
+    mainBDOM.classList.toggle('remove')
+})
 
 
 
