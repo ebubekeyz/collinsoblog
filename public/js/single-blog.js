@@ -199,7 +199,7 @@ const mapComment = async () => {
                 <p class="comment">${message}</p>
             </div>
             `
-      }).join();
+      }).join('');
   } catch (error) {
     console.log(error);
   }

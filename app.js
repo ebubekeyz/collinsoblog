@@ -123,6 +123,9 @@ app.get('/bankBlog', authenticateUser, (req, res) => {
 app.get('/dashboard', authenticateUser, (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/dashboard.html'))
 })
+app.get('/edit-post', authenticateUser, (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/edit-post.html'))
+})
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);

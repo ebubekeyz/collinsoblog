@@ -257,8 +257,7 @@ Variables
       }
       @media screen and (min-width: 800px) {
         .nav-center {
-          max-width: 1170px;
-          margin: 0 auto;
+        
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -298,4 +297,134 @@ Variables
           color: var(--clr-primary-7);
         }
       }
+
+      .menu-list li a {
+        color: white;
+      }
+
+      .menu { 
+        font-size: larger;
+        padding-top: 1rem;
+        border-bottom: 1px solid white;
+        padding-bottom: 0.8rem;
+        font-weight: bold;
+        padding-left: 1rem;
+      }
+      .menu-list li {
+        padding: 0.8rem 1rem;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .menu-list li:hover {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .title {
+        padding-left: 1rem;
+        cursor: pointer;
+      }
+
+      .body-section {
+        display: flex;
+       
+        width: 95vw;
+        max-width: var(--max-width);
+        margin: 0 auto;
+
+      }
+      .title a {
+        color: white;
+      }
+      .table {
+        display: grid; 
+        grid-template-columns: 5% 57% 18% 10% 10%;
+        border-bottom: 1px solid black;
+        justify-content: center;
+        padding-top: 1rem;
+      }
+
+      .table p {
+        color: black;
+        padding-right: 1rem;
       
+      }
+      .main-body {
+        padding: 1rem;
+       
+      }
+
+      #n-body {
+       display: none;
+      }
+
+      #i-body {
+        display: none;
+      }
+
+      #p-body {
+        display: none;
+      }
+
+      #e-body {
+        display: none;
+      }
+
+      #b-body {
+        display: none;
+      }
+
+      #fi-body {
+        display: none;
+      }
+      #f-body {
+        display: none;
+      }
+     
+      #m-body {
+        display: none;
+      }
+     
+
+      .table a {
+        color: black;
+      }
+     
+
+      .left-menu {
+        background: var(--clr-primary-5);
+        color: white;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 50vw;
+      }
+.table .cat {
+    font-weight: 700;
+    color: var(--clr-primary-5);
+    
+}
+      .left-links .title {
+        font-size: larger;
+        border-bottom: 1px solid white;
+        padding-bottom: 0.8rem;
+      }
+
+      @media screen and (min-width: 800px){
+        .body-section {
+            width: 100%;
+            max-width:100%;
+            margin: 0 auto;
+        }
+        .left-menu {
+            width:20rem;
+        }
+        .main-body {
+            width: 80vw;
+            background: var(--clr-grey-9);
+            padding: 1rem;
+           
+        }
+        .table {
+            
+        grid-template-columns: 2% 78% 10% 5% 5%;
+        }
+      }
