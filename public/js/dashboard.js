@@ -754,7 +754,7 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
-
+{/* 
 const params2 = window.location.search;
 const urlID = new URLSearchParams(params2).get('id');
 
@@ -824,7 +824,7 @@ form2.addEventListener('submit', async (e) => {
 
 
 
-window.addEventListener('DOMContentLoadedt', async () => {
+window.addEventListener('DOMContentLoaded', async () => {
 
   try {
    
@@ -850,4 +850,26 @@ window.addEventListener('DOMContentLoadedt', async () => {
   } catch (error) {
     console.log(data.msg);
   }
-});
+}); */}
+
+
+
+const logoutBtn = document.querySelector('#logout')
+
+logoutBtn.addEventListener('click', async () => {
+ try {
+    const response = await fetch('/api/v1/auth/logout', {
+        method: 'GET',
+        headers: {
+          'Content-type': 'application/json',
+        }
+    })
+
+    if(response.status === 200){
+        location.reload()
+    }
+ }
+ catch(error){
+    console.log(error)
+ }
+})

@@ -393,6 +393,9 @@ Variables
       #edit-body {
         display: block;
       }
+      #logout {
+        cursor: pointer;
+      }
       #fi-body {
         display: none;
       }

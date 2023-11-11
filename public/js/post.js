@@ -852,3 +852,25 @@ window.addEventListener('DOMContentLoaded', async () => {
     console.log(data.msg);
   }
 });
+
+
+
+const logoutBtn = document.querySelector('#logout')
+
+logoutBtn.addEventListener('click', async () => {
+ try {
+    const response = await fetch('/api/v1/auth/logout', {
+        method: 'GET',
+        headers: {
+          'Content-type': 'application/json',
+        }
+    })
+
+    if(response.status === 200){
+        location.reload()
+    }
+ }
+ catch(error){
+    console.log(error)
+ }
+})
