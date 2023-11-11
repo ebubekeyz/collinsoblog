@@ -51,22 +51,7 @@ imageInput.addEventListener('change', async (e) => {
   const formData = new FormData();
   console.log(formData);
   formData.append('image', imageFile);
-  //     try {
-  //    const response = await fetch(`/api/v1/article/uploadImageCloud`, {
-  //     method: 'POST',
-  //     headers: {
-  //         "Content-Type": "multipart/form-data"
-  //     },
-  //     body: JSON.stringify({formData})
-  //    })
-  //     const data = await response.json()
-  //     console.log(data)
-  //     const src = data.article.image
-  //      imageValue = src
-  //     } catch (error) {
-  //       imageValue = null
-  //      console.log(error);
-  //     }
+ 
   try {
     const {
       data: {

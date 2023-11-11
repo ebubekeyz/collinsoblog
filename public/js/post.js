@@ -645,7 +645,7 @@ const foodbankFunc = async () => {
         const data = await response.json()
 
         const user = data.user
-        console.log(user)
+       
 
         const {image} = user
 
@@ -762,7 +762,7 @@ imageInput2.addEventListener('change', async (e) => {
   const imageFile = e.target.files[0];
 
   const formData = new FormData();
-  console.log(formData);
+ 
   formData.append('image', imageFile);
  
   try {
@@ -824,7 +824,7 @@ form2.addEventListener('submit', async (e) => {
 
 
 
-window.addEventListener('DOMContentLoadedt', async () => {
+window.addEventListener('DOMContentLoaded', async () => {
 
   try {
    
@@ -838,6 +838,7 @@ window.addEventListener('DOMContentLoadedt', async () => {
 
     const data = await response.json();
     const article = data.article
+    console.log(article.title)
 
     const {title, description, image, category} = article
 

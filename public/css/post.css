@@ -391,7 +391,7 @@ Variables
         display: none;
       }
       #edit-body {
-        display: none;
+        display: block;
       }
       #fi-body {
         display: none;
@@ -401,6 +401,9 @@ Variables
       }
      
       #m-body {
+        display: none;
+      }
+      #all-body {
         display: none;
       }
      
