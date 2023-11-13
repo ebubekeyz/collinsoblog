@@ -132,7 +132,7 @@ p {
   font-family: 'Kaushan Script', cursive;
 }
 .section-center {
-  width: 90vw;
+  width: 95vw;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -546,8 +546,8 @@ p {
 }
 
 .text-blog {
-  background: var(--clr-grey-9);
-  padding: 2rem 2rem;
+  background: white;
+  padding: 2rem 1rem;
 }
 
 .home {
@@ -556,10 +556,19 @@ p {
   margin: 0 auto;
   margin-bottom: 2rem;
 }
+#comment-input {
+  border: 2px solid black;
+}
 
 .home a {
-  color: var(--clr-grey-2);
+  color: black;
   padding-top: 2rem;
+}
+
+.text-blog p {
+  text-align: justify;
+  line-height: 2.5;
+  color: black;
 }
 
 .comment-image {
