@@ -126,11 +126,11 @@ app.get('/dashboard', authenticateUser, (req, res) => {
 app.get('/edit-post', authenticateUser, (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/edit-post.html'))
 })
-app.get('/blank', authenticateUser, (req, res) => {
-  res.sendFile(path.resolve(__dirname, './public/blank.html'))
-})
 app.get('/post', authenticateUser, (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/post.html'))
+})
+app.get('/blank', authenticateUser, (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/blank.html'))
 })
 
 app.use(notFoundMiddleware);
