@@ -550,6 +550,10 @@ p {
   padding: 2rem 1rem;
 }
 
+
+.text-blog title{
+  font-weight: bold;
+}
 .home {
   width: 90vw;
   max-width: var(--max-width);
