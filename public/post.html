@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
 
-    <!-- <script src="https://cdn.tiny.cloud/1/rwvjr0jzpaf0k8tbonj5mzi8dqadcyf8uklhr5ondaept06r/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 
 </head>
 
@@ -293,6 +293,28 @@
                         </div>
     
                 </form>
+
+                <script>
+                    let editor;
+
+                ClassicEditor
+                .create( document.querySelector( '#desc' ) )
+                .then( newEditor => {
+                editor = newEditor;
+                } )
+                .catch( error => {
+                console.error( error );
+                } );
+
+
+                document.querySelector( '#sub-btn' ).addEventListener( 'click', () => {
+                const editorData = editor.getData();
+                console.log(editorData)
+
+                // ...
+                } );
+
+                </script>
             </div>
 
         </article>
@@ -349,8 +371,30 @@
                            
     
                         </div>
-    
+   
                 </form>
+
+                <script>
+                    let editor2;
+
+                ClassicEditor
+                .create( document.querySelector( '#desc2' ) )
+                .then( newEditor => {
+                editor2 = newEditor;
+                } )
+                .catch( error => {
+                console.error( error );
+                } );
+
+
+                // window.addEventListener( 'DOMContentLoaded', () => {
+                // const editorData = editor.getData();
+                // console.log(editorData)
+
+                // // ...
+                // } );
+
+                </script>
             </div>
 
         </article>

@@ -63,12 +63,12 @@ window.addEventListener('DOMContentLoaded', async () => {
     const titleDescDOM = document.querySelector('#title-desc');
     const bannerCenDOM = document.querySelector('.banner-center');
 
-    titleDOM.innerHTML = `<a href="/single-article?id=${
+    titleDOM.innerHTML = `<h3><a href="/single-article?id=${
       article[article.length - 1]._id
-    }">${article[article.length - 1].title}</a>`;
-    titleDescDOM.innerHTML = `<p id="title-desc">${article[
-      article.length - 1
-    ].description.slice(0, 150)}.......</p>`;
+    }">${article[article.length - 1].title}</a></h3>`;
+    // titleDescDOM.innerHTML = `<p id="title-desc">${article[
+    //   article.length - 1
+    // ].description.slice(0, 150)}.......</p>`;
 
     let newsFilter = article.filter((news) => {
       if (news.category === 'news') {

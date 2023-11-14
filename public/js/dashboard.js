@@ -680,6 +680,10 @@ const categoryInput = document.querySelector('#category')
 const imageInput = document.querySelector('#image')
 
 
+
+
+
+
 const form2 = document.querySelector('.form2')
 const subBtn2 = document.querySelector('#sub-btn2')
 const titleInput2 = document.querySelector('#title2')

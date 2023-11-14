@@ -27,7 +27,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
 
-    <!-- <script src="https://cdn.tiny.cloud/1/rwvjr0jzpaf0k8tbonj5mzi8dqadcyf8uklhr5ondaept06r/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
+    <!-- <script src="https://cdn.tiny.cloud/1/no-api/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>tinymce.init({ selector: 'textarea' });</script> -->
+
+    
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
+   
+    
 </head>
 
 <body>
@@ -91,13 +99,7 @@
         <article class="main-body">
             <h3>All Articles</h3>
             <div class="test">
-                <!-- <div class="table">
-                
-               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, explicabo</p>
-                <a href=""><span><i class="fas fa-pen"></i></span></a>
-                <a href=""><span><i class="fas fa-trash"></i></span></a>
-            </div> -->
+               
             </div>
 
 
@@ -247,7 +249,9 @@
                             <div class="desc">
                                 <textarea rows="10" class="form-input" id="desc"></textarea>
                             </div>
-
+                            
+                            
+                            
                             <span>Select Category</span>
                             <div class="">
                                 <select id="category">
@@ -273,7 +277,27 @@
                                 Add Post
                             </button>
     
-                           
+                            <script>
+                                let editor;
+
+                            ClassicEditor
+                            .create( document.querySelector( '#desc' ) )
+                            .then( newEditor => {
+                            editor = newEditor;
+                            } )
+                            .catch( error => {
+                            console.error( error );
+                            } );
+
+
+                            document.querySelector( '#sub-btn' ).addEventListener( 'click', () => {
+                            const editorData = editor.getData();
+                            console.log(editorData)
+
+                            // ...
+                            } );
+
+                            </script>
     
                         </div>
     
@@ -288,20 +312,7 @@
 
 
 
-        <!-- <script>
-            tinymce.init({
-              selector: 'textarea',
-              plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
-              toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-              tinycomments_mode: 'embedded',
-              tinycomments_author: 'Author name',
-              mergetags_list: [
-                { value: 'First.Name', title: 'First Name' },
-                { value: 'Email', title: 'Email' },
-              ],
-              ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
-            });
-          </script> -->
+      
 
         <article class="main-body" id="edit-body">
             <h3>Edit Post</h3>
@@ -375,10 +386,10 @@
 
 
 <!-- axios -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+<sc src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
 integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
 crossorigin="anonymous"
-></script>
+></sc>
 
 
     <script src="./js/dashboard.js" type="module"></script>

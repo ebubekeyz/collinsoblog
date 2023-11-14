@@ -48,9 +48,9 @@ const articleInput = document.querySelector('#article');
 const params2 = window.location.search;
 const urlID = new URLSearchParams(params2).get('id');
 
-window.addEventListener('load', () => {
-  window.localStorage.clear();
-});
+// window.addEventListener('load', () => {
+//   window.localStorage.clear();
+// });
 const getArticle = async () => {
   try {
     const response = await fetch(`/api/v1/article/${urlID}`, {
@@ -77,7 +77,7 @@ const getArticle = async () => {
     articleInput.value = id;
 
     let articleId = (articleInput.value = id);
-    console.log(articleId);
+    console.log(description);
     const idStore = localStorage.setItem('articleId', articleId);
 
     if (response.status === 200) {
@@ -86,7 +86,7 @@ const getArticle = async () => {
       bannerImgDOM.innerHTML = `<img src="${image}"class="banner-image img" alt=""> `;
 
       titleDOM.textContent = title;
-      descDOM.textContent = description;
+      descDOM.innerHTML = `${description}`
 
       window.reload();
     }
