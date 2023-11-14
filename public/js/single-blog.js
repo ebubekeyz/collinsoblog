@@ -185,19 +185,15 @@ const mapComment = async () => {
         return `
             <div class="comment-image">
                 <img src="${image}" class="comment-img img" alt="">
+                <span class="comment">${message}</span>
+            </div>
+            <div class="comment-image">
+                
+                <span class="comment">${name.toUpperCase()}</span>
+                <span class="comment">${commentMonth} ${commentDay}, ${commentYear}</span>
             </div>
 
-            <div class="comment-text">
-                <p class="name">${name}</p>
-
-                <h4 class="comment-socials">
-                    <a href="${facebook}"><span><i class="fab fa-facebook"></i></span></a>
-                <a href="${tiktok}"><span><i class="fab fa-whatsapp"></i></span></a>
-                </h4>
-
-                <p class="date">${commentMonth} ${commentDay}, ${commentYear}</p>
-                <p class="comment">${message}</p>
-            </div>
+           
             `
       }).join('');
   } catch (error) {

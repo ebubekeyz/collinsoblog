@@ -564,6 +564,8 @@ p {
   border: 2px solid black;
 }
 
+
+
 .home a {
   color: black;
   padding-top: 2rem;
@@ -576,21 +578,22 @@ p {
 }
 
 .comment-image {
-  margin: 2rem 0;
+
+display: flex;
+justify-content: flex-start;
+align-items: center;
+  margin: 0.3rem;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+
 }
 
 .comment-img {
+  margin-right: 1rem;
   height: 2rem;
   width: 2rem;
   border-radius: 10rem;
 }
 
-.comment-text h4,
-.comment-socials h3 {
-  padding: 0;
-}
 
 .comment-socials span {
   color: var(--clr-primary-5);
