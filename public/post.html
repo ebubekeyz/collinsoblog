@@ -381,6 +381,22 @@
                 .create( document.querySelector( '#desc2' ) )
                 .then( newEditor => {
                 editor2 = newEditor;
+               
+                    
+                const params2 = window.location.search;
+                const urlID = new URLSearchParams(params2).get('id');
+                fetch(`/api/v1/article/${urlID}`,{
+                    method: 'GET',
+                    headers: {
+                        "Content-Type":"application/json"
+                    }
+                }).then((response) =>{
+                    return response.json()
+                }).then((data) => {
+                    console.log(data.article)
+                    editor2.setData(`${data.article.description}` );
+                })
+
                 } )
                 .catch( error => {
                 console.error( error );

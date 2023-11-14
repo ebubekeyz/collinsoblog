@@ -95,7 +95,7 @@ Variables
   }
   p {
     margin-bottom: 1.25rem;
-    color: var(--clr-grey-7);
+   
   }
   @media screen and (min-width: 800px) {
     h1 {
