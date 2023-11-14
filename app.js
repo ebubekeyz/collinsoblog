@@ -50,7 +50,9 @@ app.use(express.static('./public'));
 
 app.use(fileUpload({ useTempFiles: true }));
 
-app.use(cors({credentials: true}));
+app.use(cors({credentials: true}))
+
+
 
 //Routers
 app.use('/api/v1/auth', authRouter)

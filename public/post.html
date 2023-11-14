@@ -29,6 +29,9 @@
 
     <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 
+    <script src="https://example.com/ckfinder/ckfinder.js"></script>
+
+
 </head>
 
 <body>
@@ -378,7 +381,17 @@
                     let editor2;
                   
                 ClassicEditor
-                .create( document.querySelector( '#desc2' ))
+                .create( document.querySelector( '#desc2' ),{
+                    ckfinder: {
+            // Upload the images to the server using the CKFinder QuickUpload command.
+            uploadUrl: 'https://example.com/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images&responseType=json',
+
+            // Define the CKFinder configuration (if necessary).
+            options: {
+                resourceType: 'Images'
+            }
+        }
+                })
                 .then( newEditor => {
                 editor2 = newEditor;
                
@@ -411,6 +424,10 @@
                 // } );
 
                 </script>
+
+
+
+              
             </div>
 
         </article>
@@ -432,10 +449,10 @@
 
 
 <!-- axios -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+<scripr src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
 integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
 crossorigin="anonymous"
-></script>
+></scripr>
 
 
     <script src="./js/post.js" type="module"></script>
