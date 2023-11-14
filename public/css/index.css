@@ -417,10 +417,7 @@ Start
   color: white;
 }
 
-.banner-center #title {
-  font-style:italic;
-  text-align: center;
-}
+
 .banner-center {
   background: linear-gradient(rgba(218, 10, 10, 0.7), rgb(0, 0, 0, 0.8)),
     url('https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg')
@@ -429,9 +426,7 @@ Start
   padding: 1rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
-  place-items: center;
+
 }
 
 /* .banner-center p {
@@ -576,8 +571,8 @@ p {
     width: 18rem;
   }
 
-  .banner-center {
-    height: 32vh;
+  .banner-center #title a {
+   line-height: 1.6;
   }
 
   .blog {
