@@ -58,6 +58,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     const data = await response.json();
     let article = data.article;
+    console.log(article)
 
     const titleDOM = document.querySelector('#title');
     const titleDescDOM = document.querySelector('#title-desc');
