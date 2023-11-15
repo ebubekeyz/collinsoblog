@@ -71,7 +71,7 @@ const getArticle = async () => {
     //     }
     // })
     const fbShareBtn = document.querySelector('#fb-share')
-const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + `https://www.collinsomoney.com/single-article/${id}`
+const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + `https://www.collinsomoney.com/single-article?id=${id}`
 
 function shareFacebook(){
   window.open(navUrl, '_blank')
