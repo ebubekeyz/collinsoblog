@@ -65,6 +65,32 @@ const getArticle = async () => {
 
     const { _id: id, title, category, description, image } = article;
 
+    const headTag = document.getElementsByTagName('HEAD')[0];
+    const titleTag = document.createElement('meta');
+    titleTag.setAttribute("property", "og:title");
+    titleTag.setAttribute("content", `${title}`);
+    headTag.appendChild(titleTag);
+
+    const descTag = document.createElement('meta');
+    descTag.setAttribute("property", "og:description");
+    descTag.setAttribute("content", `${description}`);
+    headTag.appendChild(descTag);
+
+    const imgTag = document.createElement('meta');
+    imgTag.setAttribute("property", "og:image");
+    imgTag.setAttribute("content", `${image}`);
+    headTag.appendChild(imgTag);
+
+    const typeTag = document.createElement('meta');
+    typeTag.setAttribute("property", "og:type");
+    typeTag.setAttribute("content", `${category} article`);
+    headTag.appendChild(typeTag);
+
+    const urlTag = document.createElement('meta');
+    urlTag.setAttribute("property", "og:url");
+    urlTag.setAttribute("content", `https://www.collinsomoney.com/single-article?id=${id}`);
+    headTag.appendChild(urlTag);
+
     // let singleFilter = article.filter((single) => {
     //     if(single.category === 'news'){
     //         return single
