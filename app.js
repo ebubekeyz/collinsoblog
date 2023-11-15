@@ -52,8 +52,6 @@ app.use(fileUpload({ useTempFiles: true }));
 
 app.use(cors({credentials: true}))
 
-
-
 //Routers
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/user', userRouter)
