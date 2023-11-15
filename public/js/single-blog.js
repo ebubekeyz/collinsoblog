@@ -70,6 +70,14 @@ const getArticle = async () => {
     //         return single
     //     }
     // })
+    const fbShareBtn = document.querySelector('#fb-share')
+const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + `https://www.collinsomoney.com/single-article/${id}`
+
+function shareFacebook(){
+  window.open(navUrl, '_blank')
+}
+
+fbShareBtn.addEventListener('click', shareFacebook)
 
     const descDOM = document.querySelector('.desc');
     const bannerImgDOM = document.querySelector('.banner-img');
@@ -202,3 +210,7 @@ const mapComment = async () => {
 };
 
 mapComment();
+
+
+
+
