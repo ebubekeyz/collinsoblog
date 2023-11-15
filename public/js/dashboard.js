@@ -704,11 +704,7 @@ imageInput.addEventListener('change', async (e) => {
   formData.append('image', imageFile);
  
   try {
-    const {
-      data: {
-        image: { src },
-      },
-    } = await axios.post('/api/v1/article/uploadImageCloud', formData, {
+    const {data: {image: { src }} } = await axios.post('/api/v1/article/uploadImageCloud', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
