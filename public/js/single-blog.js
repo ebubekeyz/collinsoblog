@@ -70,6 +70,22 @@ const getArticle = async () => {
     //         return single
     //     }
     // })
+
+
+
+    const headDOM = document.querySelector('head')
+    console.log(headDOM)
+
+    
+    
+    headDOM.innerHTML = `
+    <meta property="og:description" content="${description.slice(0, 100)}"/>
+    <meta property="og:title" content="${title.toUpperCase()}"/>
+    <meta property="og:type" content="${category} article"/>
+    <meta property="og:url" content="https://www.collinsomoney.com/single-article?id=${id}"/>
+    <meta property="og:image" content="${image}"/>
+    `
+
     const fbShareBtn = document.querySelector('#fb-share')
 const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + `https://www.collinsomoney.com/single-article?id=${id}`
 
