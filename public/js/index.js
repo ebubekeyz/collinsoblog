@@ -123,7 +123,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     const newsLength2 = newsFilter.length - 2;
 
     const moneyLength = moneyFilter.length - 1;
-    const moneyLength2 = moneyFilter.length - 2;
+    // const moneyLength2 = moneyFilter.length - 2;
 
     const insuranceLength = insuranceFilter.length - 1;
     const insuranceLength2 = insuranceFilter.length - 2;
@@ -155,7 +155,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     const foodbankDate2 = foodbankFilter[foodbankLength2].createdAt;
 
-    const moneyDate2 = moneyFilter[moneyLength2].createdAt;
+    // const moneyDate2 = moneyFilter[moneyLength2].createdAt;
 
     const fintechDate = fintechFilter[fintechLength].createdAt;
 
@@ -217,11 +217,11 @@ window.addEventListener('DOMContentLoaded', async () => {
     const mYear = moneyD.getFullYear();
     const mDate = moneyD.getDate();
 
-    let moneyD2 = new Date(moneyDate2);
-    let mMonth2 = moneyD2.getMonth();
-    mMonth2 = months[mMonth2];
-    const mYear2 = moneyD2.getFullYear();
-    const mDate2 = moneyD2.getDate();
+    // let moneyD2 = new Date(moneyDate2);
+    // let mMonth2 = moneyD2.getMonth();
+    // mMonth2 = months[mMonth2];
+    // const mYear2 = moneyD2.getFullYear();
+    // const mDate2 = moneyD2.getDate();
 
     let newsD = new Date(newsDate);
     let nMonth = newsD.getMonth();
@@ -342,36 +342,7 @@ window.addEventListener('DOMContentLoaded', async () => {
           </div>
         </article>
 
-        <article class="blog">
-          <div class="blog-img">
-            <img
-              src="${moneyFilter[moneyLength2].image}"
-              class="main-img img"
-              alt="blog-img"
-            />
-
-            <span class="tag">${moneyFilter[
-              moneyLength2
-            ].category.toUpperCase()}</span>
-            <a href="/single-article?id=${
-              moneyFilter[moneyLength2]._id
-            }" class="tag2 main-btn btn">Read More</a>
-          </div>
-
-          <div class="inner">
-            <a href="/single-article?id=${moneyFilter[moneyLength2]._id}"
-              ><h3>
-              ${moneyFilter[moneyLength2].title}
-              </h3></a
-            >
-
-            <div class="info">
-              <p>${moneyFilter[moneyLength2].user.name}</p>
-              
-              <p>${mMonth2} ${mDate2}, ${mYear2}</p>
-            </div>
-          </div>
-        </article>
+        
         `;
 
     // insurance
@@ -675,3 +646,35 @@ form.addEventListener('submit', async (e) => {
     console.log(error);
   }
 });
+
+
+{/* <article class="blog">
+          <div class="blog-img">
+            <img
+              src="${moneyFilter[moneyLength2].image}"
+              class="main-img img"
+              alt="blog-img"
+            />
+
+            <span class="tag">${moneyFilter[
+              moneyLength2
+            ].category.toUpperCase()}</span>
+            <a href="/single-article?id=${
+              moneyFilter[moneyLength2]._id
+            }" class="tag2 main-btn btn">Read More</a>
+          </div>
+
+          <div class="inner">
+            <a href="/single-article?id=${moneyFilter[moneyLength2]._id}"
+              ><h3>
+              ${moneyFilter[moneyLength2].title}
+              </h3></a
+            >
+
+            <div class="info">
+              <p>${moneyFilter[moneyLength2].user.name}</p>
+              
+              <p>${mMonth2} ${mDate2}, ${mYear2}</p>
+            </div>
+          </div>
+        </article> */}
