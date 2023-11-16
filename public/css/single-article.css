@@ -203,6 +203,10 @@ p {
   background: var(--clr-black);
   color: var(--clr-grey-10);
   font-family: 'Courier New', Courier, monospace;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
 }
 
 .top {
