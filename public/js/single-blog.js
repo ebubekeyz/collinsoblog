@@ -71,15 +71,7 @@ const getArticle = async () => {
     titleTag.setAttribute("content", `${title}`);
     headTag.appendChild(titleTag);
 
-    const descTag = document.createElement('meta');
-    descTag.setAttribute("property", "og:description");
-    descTag.setAttribute("content", `${description}`);
-    headTag.appendChild(descTag);
-
-    const imgTag = document.createElement('meta');
-    imgTag.setAttribute("property", "og:image");
-    imgTag.setAttribute("content", `${image}`);
-    headTag.appendChild(imgTag);
+    
 
     const typeTag = document.createElement('meta');
     typeTag.setAttribute("property", "og:type");
