@@ -258,7 +258,7 @@ const articleFunc = async () => {
             return news
         }
       })
-      // console.log(article)
+   
       let idnum = 0;
       newsBodyDOM.innerHTML = newsFilter.map((body) => {
         body.idnum = idnum++
@@ -308,7 +308,7 @@ const articleFunc = async () => {
             return news
         }
       })
-      // console.log(article)
+    
       let idnum = 0;
       makemoneyBodyDOM.innerHTML = newsFilter.map((body) => {
         body.idnum = idnum++
@@ -838,7 +838,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     const data = await response.json();
     const article = data.article
-    console.log(article.title)
+   
 
     const {title, description, image, category} = article
 
@@ -849,7 +849,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       imageInput2.value = image
     }
   } catch (error) {
-    console.log(data.msg);
+   
   }
 });
 
