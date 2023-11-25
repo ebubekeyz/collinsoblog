@@ -9,11 +9,13 @@ const {
     getSingleUserArticle,
     updateArticle,
     deleteArticle,
-    uploadImageCloud
+    uploadImageCloud,
+    uploadVideoCloud
 } = require('../controllers/articleController')
 
 
 router.route('/uploadImageCloud').post(uploadImageCloud)
+router.route('/uploadVideoCloud').post(uploadVideoCloud)
 router.route('/singleUserArticle').get(authenticateUser, getSingleUserArticle)
 router
 .route('/')

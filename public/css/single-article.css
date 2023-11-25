@@ -409,11 +409,19 @@ Start
   position: relative;
   width: 100%;
   height: 15rem;
+  margin-bottom: 2rem;
 }
 
 .banner-image {
   width: 100%;
   height: 15rem;
+}
+
+#vid-test {
+  object-fit: fill;
+  width: 100%;
+  height: 40vh;
+z-index: 12;
 }
 
 .banner-img::after {

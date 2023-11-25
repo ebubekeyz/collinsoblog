@@ -13,6 +13,10 @@ const ArticleSchema = new mongoose.Schema({
         type: String,
         default: 'https://res.cloudinary.com/dsrtdywmf/image/upload/v1699129797/collinsoblog/tmp-1-1699129775708_z9ohkh.jpg',
       },
+      video: {
+        type: String,
+
+      },
 
       category: {
         type: String,

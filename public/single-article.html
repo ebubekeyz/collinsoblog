@@ -122,6 +122,9 @@
   <div class="banner-center">
     <div class="banner-img">
         <!-- <img src="https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg" class="banner-image img" alt="">-->
+        <!-- <video controls poster="" class="vid main-vid" id="vid-test">
+          <source src="" type="video/mp4" size="576">
+     </video> -->
     </div> 
     
   </div>
@@ -255,7 +258,7 @@ const getArticle = async () => {
     const data = await response.json();
     let article = data.article;
 
-    const { _id: id, title, category, description, image } = article;
+    const { _id: id, title, category, description, image, video } = article;
 
   
 
@@ -282,7 +285,16 @@ fbShareBtn.addEventListener('click', shareFacebook)
       const titleDOM = document.querySelector('.title');
     
 
+     
+    if(video){
+      bannerImgDOM.innerHTML = ` <video controls id="vid-test">
+              <source src="${video}" type="video/mp4" size="576">
+         </video>`
+    }
+    else {
       bannerImgDOM.innerHTML = `<img src="${image}"class="banner-image img" alt="" height="200vh"> `;
+    }
+      
 
  
       titleDOM.textContent = title;

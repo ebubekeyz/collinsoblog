@@ -76,6 +76,18 @@ const uploadImageCloud = async(req, res) => {
     fs.unlinkSync(req.files.image.tempFilePath)
     return res.status(StatusCodes.OK).json({image: {src: result.secure_url}})
 }
+const uploadVideoCloud = async(req, res) => {
+    console.log(req.files)
+    const result = await cloudinary.uploader.upload(
+        req.files.video.tempFilePath, {
+            resource_type: 'video',
+            use_filename: true, folder: 'collinsoblog',
+        }
+    )
+    
+    fs.unlinkSync(req.files.video.tempFilePath)
+    return res.status(StatusCodes.OK).json({video: {src: result.secure_url}})
+}
 
 module.exports = {
     createArticle,
@@ -84,5 +96,6 @@ module.exports = {
     getSingleUserArticle,
     updateArticle,
     deleteArticle,
-    uploadImageCloud
+    uploadImageCloud,
+    uploadVideoCloud
 }
