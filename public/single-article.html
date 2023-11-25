@@ -289,17 +289,19 @@ meta6.setAttribute('property', 'og:title')
 meta6.setAttribute('content', `${title}`)
 head.appendChild(meta6)
 
-const meta7 = document.createElement('meta')
-meta7.setAttribute('name', 'title')
-meta7.setAttribute('content', `${title}`)
-head.appendChild(meta7)
-
 const meta8 = document.createElement('meta')
 meta8.setAttribute('property', 'og:url')
 meta8.setAttribute('content', `https://www.collinsomoney.com?id=${id}`)
 head.appendChild(meta8)
 
  
+
+const meta7 = document.createElement('meta')
+meta7.setAttribute('name', 'title')
+meta7.setAttribute('content', `${title}`)
+head.appendChild(meta7)
+
+
          
             
         } catch (error) {
