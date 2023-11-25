@@ -13,10 +13,10 @@
       property="og:description"
       content="Discover your world captivating content on Collins Blog."
     />
-    <meta
+    <!-- <meta
       property="og:title"
       content="Uncover the Stories, Ignite Your Imagination"
-    />
+    /> -->
     <!-- <meta
       property="og:image"
       content="https://res.cloudinary.com/dsrtdywmf/image/upload/v1700287869/collinsoblog/tmp-1-1700287731318_lx0uye.png"
@@ -301,6 +301,11 @@ const meta5 = document.createElement('meta')
 meta5.setAttribute('property', 'og:video:duration')
 meta5.setAttribute('content', '300')
 head.appendChild(meta5)
+
+const meta6 = document.createElement('meta')
+meta6.setAttribute('property', 'og:title')
+meta6.setAttribute('content', `${title}`)
+head.appendChild(meta6)
 
   const fbShareBtn = document.querySelector('#fb-share');
 
