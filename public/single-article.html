@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   
-    <meta property="og:url" content="https://www.collinsomoney.com" />
+    <!-- <meta property="og:url" content="https://www.collinsomoney.com" /> -->
     <meta
       name="keywords"
       content="current events, breaking news, global news, local news, political updates, world affairs, technology news, science updates, businessnews,m entertainment news, health news, environmental issues, social issues, sport highlights, investigative journalism"
@@ -363,6 +363,11 @@ const meta6 = document.createElement('meta')
 meta6.setAttribute('property', 'og:title')
 meta6.setAttribute('content', `${title}`)
 head.appendChild(meta6)
+
+const meta7 = document.createElement('meta')
+meta7.setAttribute('property', 'og:url')
+meta7.setAttribute('content', `https://www.collinsomoney.com/single-article?id=${id}`)
+head.appendChild(meta7)
 
   const fbShareBtn = document.querySelector('#fb-share');
 
