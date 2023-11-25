@@ -9,10 +9,7 @@
       name="description"
       content="Discover your world captivating content on Collins Blog. "
     />
-    <meta
-      property="og:description"
-      content="Discover your world captivating content on Collins Blog."
-    />
+   
     <!-- <meta
       property="og:title"
       content="Uncover the Stories, Ignite Your Imagination"
@@ -247,6 +244,73 @@
       const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
 
       const articleInput = document.querySelector('#article');
+
+      const params7 = window.location.search;
+      const urlID7 = new URLSearchParams(params7).get('id');
+
+      const shareFunc = async() => {
+        try {
+          const response = await fetch(`/api/v1/article/${urlID7}`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          });
+
+          const data = await response.json();
+          let article = data.article;
+
+          const {
+            _id: id,
+            title,
+            category,
+            description,
+            image,
+            video,
+          } = article;
+
+const head = document.querySelector('.head')
+const meta = document.createElement('meta')
+meta.setAttribute('property', 'og:image')
+meta.setAttribute('content',`${image}`)
+head.appendChild(meta)
+
+const meta2 = document.createElement('meta')
+meta2.setAttribute('property', 'og:video')
+meta2.setAttribute('content',`${video}`)
+head.appendChild(meta2)
+
+
+const meta3 = document.createElement('meta')
+meta3.setAttribute('property', 'og:video:width')
+meta3.setAttribute('content', '350')
+head.appendChild(meta3)
+
+const meta4 = document.createElement('meta')
+meta4.setAttribute('property', 'og:video:height')
+meta4.setAttribute('content', '200')
+head.appendChild(meta4)
+
+const meta5 = document.createElement('meta')
+meta5.setAttribute('property', 'og:video:duration')
+meta5.setAttribute('content', '300')
+head.appendChild(meta5)
+
+const meta6 = document.createElement('meta')
+meta6.setAttribute('property', 'og:title')
+meta6.setAttribute('content', `${title}`)
+head.appendChild(meta6)
+
+ 
+         
+            
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      shareFunc()
+
 
       const params2 = window.location.search;
       const urlID = new URLSearchParams(params2).get('id');
