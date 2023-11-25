@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head class="head">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,15 +9,24 @@
       name="description"
       content="Discover your world captivating content on Collins Blog. "
     />
-    <meta property="og:description" content="Discover your world captivating content on Collins Blog."/>
-    <meta property="og:title" content="Uncover the Stories, Ignite Your Imagination"/>
-    <meta property="og:image" content="https://res.cloudinary.com/dsrtdywmf/image/upload/v1700287869/collinsoblog/tmp-1-1700287731318_lx0uye.png"/>
-    <meta property="og:url" content="https://www.collinsomoney.com"/>
+    <meta
+      property="og:description"
+      content="Discover your world captivating content on Collins Blog."
+    />
+    <meta
+      property="og:title"
+      content="Uncover the Stories, Ignite Your Imagination"
+    />
+    <!-- <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dsrtdywmf/image/upload/v1700287869/collinsoblog/tmp-1-1700287731318_lx0uye.png"
+    /> -->
+    <meta property="og:url" content="https://www.collinsomoney.com" />
     <meta
       name="keywords"
       content="current events, breaking news, global news, local news, political updates, world affairs, technology news, science updates, businessnews,m entertainment news, health news, environmental issues, social issues, sport highlights, investigative journalism"
     />
-   
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <meta name="author" content="Collins Ojete" />
@@ -50,10 +59,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
 
-    <style>
-     
-      
-    </style>
+    <style></style>
   </head>
   <body>
     <!-- top header -->
@@ -82,7 +88,6 @@
             ></span>
           </div>
 
-
           <div class="desk">
             <ul class="menu">
               <a href="/newsBlog"><li class="news">News</li></a>
@@ -102,9 +107,7 @@
                 ><li>
                   <span><i class="fab fa-facebook"></i></span></li
               ></a>
-              <a
-                href="https://wa.link/00d97l"
-                target="_blank"
+              <a href="https://wa.link/00d97l" target="_blank"
                 ><li>
                   <span><i class="fab fa-whatsapp"></i></span></li
               ></a>
@@ -114,48 +117,57 @@
       </div>
     </div>
 
-
-
     <!-- start -->
- <!-- banner -->
- <div class="banner-section">
-  <div class="banner-center">
-    <div class="banner-img">
-        <!-- <img src="https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg" class="banner-image img" alt="">-->
-        <div class="vid-container"></div>
-    </div> 
-    
-  </div>
-</div>
+    <!-- banner -->
+    <div class="banner-section">
+      <div class="banner-center">
+        <div class="banner-img">
+          <!-- <img src="https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg" class="banner-image img" alt="">-->
+          <div class="vid-container"></div>
+        </div>
+      </div>
+    </div>
 
-<!-- <div class="text-blog">
+    <!-- <div class="text-blog">
     <div class="home">
         <a href="/"><span><i class="fas fa-home"></i></span> Home Page</a>
       </div>
       </div> -->
 
-<div class="single-section">
-  <div class="sing" width="100%">
-    <h3 class="title"></h3>
-  <p class="desc"></p>
-  </div>
-  
-  </div>
+    <div class="single-section">
+      <div class="sing" width="100%">
+        <h3 class="title"></h3>
+        <p class="desc"></p>
+      </div>
+    </div>
 
+    <div class="fb-share">
+      <button class="share-btn button btn" id="fb-share">
+        <i class="fas fa-share"></i>share post
+      </button>
+    </div>
 
-  <div class="fb-share"><button class="share-btn button btn" id="fb-share"><i class="fas fa-share"></i>share post</button></div>
+    <form class="form">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Type your article id"
+        id="article"
+        hidden
+      />
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Type your comment"
+        id="comment-input"
+      />
+      <button type="submit" class="sub-btn btn" id="comment-btn">
+        Comment
+      </button>
+    </form>
 
-  <form class="form" >
-    <input type="text" class="form-control"  placeholder="Type your article id" id="article" hidden >
-   <input type="text" class="form-control" placeholder="Type your comment" id="comment-input">
-    <button type="submit" class="sub-btn btn" id="comment-btn">
-      Comment
-    </button>
-  </form>
-
-
-  <div class="comment-section" id="comment-info">
-    <!-- <div class="comment-image">
+    <div class="comment-section" id="comment-info">
+      <!-- <div class="comment-image">
         <img src="https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg" class="comment-img img" alt="">
     </div>
 
@@ -170,10 +182,9 @@
         <p class="date">Nov 12, 2023</p>
         <p class="comment">Nice One fro admin. What do you think</p>
     </div> -->
-  </div>
+    </div>
 
-
-        <!-- footer -->
+    <!-- footer -->
 
     <div class="footer">
       <div class="footer-center">
@@ -182,7 +193,6 @@
           <span class="footer-year"></span>
         </span>
         <ul class="footer-info">
-         
           <a href="/about"><li>About</li></a>
           <a href="/advertise"><li>Advertise</li></a>
           <a href="/contact"><li>Contact</li></a>
@@ -190,223 +200,225 @@
       </div>
     </div>
 
-      <script>
-        const barsBtn = document.querySelector('#bars');
-const closeBtn = document.querySelector('#close');
-const deskDOM = document.querySelector('.desk');
+    <script>
+      const barsBtn = document.querySelector('#bars');
+      const closeBtn = document.querySelector('#close');
+      const deskDOM = document.querySelector('.desk');
 
-barsBtn.addEventListener('click', () => {
-  deskDOM.classList.toggle('show');
-  barsBtn.style.display = 'none';
-  closeBtn.classList.toggle('show');
-});
+      barsBtn.addEventListener('click', () => {
+        deskDOM.classList.toggle('show');
+        barsBtn.style.display = 'none';
+        closeBtn.classList.toggle('show');
+      });
 
-closeBtn.addEventListener('click', () => {
-  closeBtn.classList.remove('show');
-  barsBtn.style.display = 'block';
-  deskDOM.classList.remove('show');
-});
+      closeBtn.addEventListener('click', () => {
+        closeBtn.classList.remove('show');
+        barsBtn.style.display = 'block';
+        deskDOM.classList.remove('show');
+      });
 
-const submitBtn = document.querySelector('#submit');
-const inputControl = document.querySelector('.input-control');
+      const submitBtn = document.querySelector('#submit');
+      const inputControl = document.querySelector('.input-control');
 
-let date3 = new Date();
-const footerYearDOM = document.querySelector('.footer-year');
-const footerYear = date3.getFullYear();
-date3 = date3.toLocaleString();
-footerYearDOM.textContent = footerYear;
+      let date3 = new Date();
+      const footerYearDOM = document.querySelector('.footer-year');
+      const footerYear = date3.getFullYear();
+      date3 = date3.toLocaleString();
+      footerYearDOM.textContent = footerYear;
 
-// const timeDOM = document.querySelector('.time');
+      // const timeDOM = document.querySelector('.time');
 
-// timeDOM.innerHTML = `<li>${date3}</li>`;
+      // timeDOM.innerHTML = `<li>${date3}</li>`;
 
-const months = [
-  'Jan',
-  'Feb',
-  'Mar',
-  'Apr',
-  'May',
-  'Jun',
-  'Jul',
-  'Aug',
-  'Sep',
-  'Oct',
-  'Nov',
-  'Dec',
-];
-const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+      const months = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
+      ];
+      const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
 
-const articleInput = document.querySelector('#article');
+      const articleInput = document.querySelector('#article');
 
-        const params2 = window.location.search;
-const urlID = new URLSearchParams(params2).get('id');
+      const params2 = window.location.search;
+      const urlID = new URLSearchParams(params2).get('id');
 
-window.addEventListener('load', () => {
-  window.localStorage.clear();
-});
-const getArticle = async () => {
-  try {
-    const response = await fetch(`/api/v1/article/${urlID}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+      window.addEventListener('load', () => {
+        window.localStorage.clear();
+      });
+      const getArticle = async () => {
+        try {
+          const response = await fetch(`/api/v1/article/${urlID}`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          });
 
-    const data = await response.json();
-    let article = data.article;
+          const data = await response.json();
+          let article = data.article;
 
-    const { _id: id, title, category, description, image, video } = article;
+          const {
+            _id: id,
+            title,
+            category,
+            description,
+            image,
+            video,
+          } = article;
 
-  
+const head = document.querySelector('.head')
+const meta = document.createElement('meta')
+meta.setAttribute('property', 'og:image')
+meta.setAttribute('content',`${image}`)
+head.appendChild(meta)
+  const fbShareBtn = document.querySelector('#fb-share');
 
-    const fbShareBtn = document.querySelector('#fb-share')
+          const navUrl =
+            'https://www.facebook.com/sharer/sharer.php?u=' +
+            `https://www.collinsomoney.com/single-article?id=${id}`;
 
-const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + `https://www.collinsomoney.com/single-article?id=${id}`
+          function shareFacebook() {
+            window.open(navUrl, '_blank');
+          }
 
-function shareFacebook(){
-  window.open(navUrl, '_blank')
-}
+          fbShareBtn.addEventListener('click', shareFacebook);
 
-fbShareBtn.addEventListener('click', shareFacebook)
+          const descDOM = document.querySelector('.desc');
+          const bannerImgDOM = document.querySelector('.banner-img');
 
-    const descDOM = document.querySelector('.desc');
-    const bannerImgDOM = document.querySelector('.banner-img');
+          articleInput.value = id;
 
-    articleInput.value = id;
+          let articleId = (articleInput.value = id);
 
-    let articleId = (articleInput.value = id);
+          const idStore = localStorage.setItem('articleId', articleId);
 
-    const idStore = localStorage.setItem('articleId', articleId);
+          if (response.status === 200) {
+            const titleDOM = document.querySelector('.title');
 
-    if (response.status === 200) {
-      const titleDOM = document.querySelector('.title');
-    
+            const vidCont = document.querySelector('.vid-container');
 
-      const vidCont = document.querySelector('.vid-container')
-     
-    if(video){
-      // bannerImgDOM.innerHTML = ` <video controls id="vid-test">
-      //         <source src="${video}" type="video/mp4" size="576">
-      //    </video>`
-      const vidMain = document.createElement('video')
-      vidMain.setAttribute('id','vid-test')
-      vidMain.setAttribute('controls',true)
-      vidMain.setAttribute('muted',true)
-      vidMain.setAttribute('autoplay',true)
-      vidMain.setAttribute('loop',true)
-      vidMain.src = `${video}`
+            if (video) {
+              // bannerImgDOM.innerHTML = ` <video controls id="vid-test">
+              //         <source src="${video}" type="video/mp4" size="576">
+              //    </video>`
+              const vidMain = document.createElement('video');
+              vidMain.setAttribute('id', 'vid-test');
+              vidMain.setAttribute('controls', true);
+              vidMain.setAttribute('muted', true);
+              vidMain.setAttribute('autoplay', true);
+              vidMain.setAttribute('loop', true);
+              vidMain.src = `${video}`;
 
-     
-      vidCont.appendChild(vidMain)
-    }
-    else {
-      bannerImgDOM.innerHTML = `<img src="${image}"class="banner-image img" alt="" height="200vh"> `;
-    }
-      
+              vidCont.appendChild(vidMain);
+            } else {
+              bannerImgDOM.innerHTML = `<img src="${image}"class="banner-image img" alt="" height="200vh"> `;
+            }
 
- 
-      titleDOM.textContent = title;
-      descDOM.innerHTML = `${description}`
+            titleDOM.textContent = title;
+            descDOM.innerHTML = `${description}`;
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      };
 
-    
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+      getArticle();
 
-getArticle();
+      const commentInput = document.querySelector('#comment-input');
+      const commentBtn = document.querySelector('#comment-btn');
+      const nameDOM = document.querySelector('.name');
+      const dateDOM = document.querySelector('.date');
+      const commentDOM = document.querySelector('.comment');
 
+      commentBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
 
+        const message = commentInput.value;
+        const article = articleInput.value;
 
+        try {
+          commentBtn.textContent = 'sending..';
+          const response = await fetch('/api/v1/comment', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message, article }),
+          });
+          const data = await response.json();
 
-const commentInput = document.querySelector('#comment-input');
-const commentBtn = document.querySelector('#comment-btn');
-const nameDOM = document.querySelector('.name');
-const dateDOM = document.querySelector('.date');
-const commentDOM = document.querySelector('.comment');
+          if (response.status === 201) {
+            commentInput.value = '';
+            commentBtn.textContent = 'comment';
 
-commentBtn.addEventListener('click', async (e) => {
-  e.preventDefault();
+            location.reload();
+          } else {
+            commentBtn.textContent = 'comment failed';
+          }
+        } catch (error) {
+          console.log(error);
+          commentBtn.textContent = 'comment failed';
+          window.location = '/login';
+        }
+      });
 
-  const message = commentInput.value;
-  const article = articleInput.value;
+      //     window.addEventListener('DOMContentLoaded', async() => {
 
-  try {
-    commentBtn.textContent = 'sending..';
-    const response = await fetch('/api/v1/comment', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ message, article }),
-    });
-    const data = await response.json();
+      // })
 
-    if (response.status === 201) {
-      commentInput.value = '';
-      commentBtn.textContent = 'comment';
+      const params6 = window.location.search;
+      const urlID6 = new URLSearchParams(params6).get('id');
 
-      location.reload();
-    } else {
-      commentBtn.textContent = 'comment failed';
-    }
-  } catch (error) {
-    console.log(error);
-    commentBtn.textContent = 'comment failed';
-    window.location = '/login';
-  }
-});
+      const mapComment = async () => {
+        const artId = urlID6;
 
-//     window.addEventListener('DOMContentLoaded', async() => {
+        console.log(artId);
+        try {
+          const response = await fetch(`/api/v1/comment/${artId}/article`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          });
 
-// })
+          const data = await response.json();
+          const comment = data.comment;
+          console.log(comment);
 
-const params6 = window.location.search;
-const urlID6 = new URLSearchParams(params6).get('id');
+          const commentInfo = document.querySelector('#comment-info');
 
-const mapComment = async () => {
-  const artId = urlID6
+          commentInfo.innerHTML = comment
+            .map((comment) => {
+              const {
+                _id: id,
+                message,
+                user: {
+                  name: name,
+                  facebook: facebook,
+                  tiktok: tiktok,
+                  image: image,
+                },
+                createdAt,
+              } = comment;
 
-  console.log(artId);
-  try {
-    const response = await fetch(`/api/v1/comment/${artId}/article`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+              let commentDate = new Date(createdAt);
 
-    const data = await response.json();
-    const comment = data.comment;
-    console.log(comment);
+              let commentMonth = commentDate.getMonth();
+              commentMonth = months[commentMonth];
+              const commentYear = commentDate.getFullYear();
+              const commentDay = commentDate.getDate();
+              console.log(commentMonth, commentDay, commentYear);
 
-    const commentInfo = document.querySelector('#comment-info');
-
-    commentInfo.innerHTML = comment
-      .map((comment) => {
-        const {
-          _id: id,
-          message,
-          user: {
-            name: name,
-            facebook: facebook,
-            tiktok: tiktok,
-            image: image,
-          },
-          createdAt,
-        } = comment;
-
-        let commentDate = new Date(createdAt);
-
-        let commentMonth = commentDate.getMonth();
-        commentMonth = months[commentMonth];
-        const commentYear = commentDate.getFullYear();
-        const commentDay = commentDate.getDate();
-        console.log(commentMonth, commentDay, commentYear);
-
-        return `
+              return `
             <div class="comment-image">
                 <img src="${image}" class="comment-img img" alt="">
                 <span class="comment">${message}</span>
@@ -418,26 +430,19 @@ const mapComment = async () => {
             </div>
 
            
-            `
-      }).join('');
-  } catch (error) {
-    console.log(error);
-  }
-};
+            `;
+            })
+            .join('');
+        } catch (error) {
+          console.log(error);
+        }
+      };
 
-mapComment();
+      mapComment();
+    </script>
 
-
-
-
-
-      </script>
-
-
-
-
-      <!-- in page ads -->
-   <!-- <script>
+    <!-- in page ads -->
+    <!-- <script>
     (function(enuz){
     var d = document,
         s = d.createElement('script'),
@@ -447,9 +452,5 @@ mapComment();
     l.parentNode.insertBefore(s, l);
     })({})
     </script> -->
-
-
-  
-   
   </body>
 </html>
