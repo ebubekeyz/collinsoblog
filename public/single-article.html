@@ -280,6 +280,28 @@ const meta = document.createElement('meta')
 meta.setAttribute('property', 'og:image')
 meta.setAttribute('content',`${image}`)
 head.appendChild(meta)
+
+const meta2 = document.createElement('meta')
+meta2.setAttribute('property', 'og:video')
+meta2.setAttribute('content',`${video}`)
+head.appendChild(meta2)
+
+
+const meta3 = document.createElement('meta')
+meta3.setAttribute('property', 'og:video:width')
+meta3.setAttribute('content', '350')
+head.appendChild(meta3)
+
+const meta4 = document.createElement('meta')
+meta4.setAttribute('property', 'og:video:height')
+meta4.setAttribute('content', '200')
+head.appendChild(meta4)
+
+const meta5 = document.createElement('meta')
+meta5.setAttribute('property', 'og:video:duration')
+meta5.setAttribute('content', '300')
+head.appendChild(meta5)
+
   const fbShareBtn = document.querySelector('#fb-share');
 
           const navUrl =
