@@ -13,7 +13,7 @@
       name="keywords"
       content="news, bank products, food bank, make money, fintech, insurance, events, products, advertise"
     />
-    <meta name="robots" content="noindex, nofollow" />
+    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <meta name="author" content="Collins Ojete" />
@@ -134,7 +134,7 @@
           <span class="footer-year"></span>
         </span>
         <ul class="footer-info">
-          <a href="/privacy"><li>Privacy</li></a>
+         
           <a href="/about"><li>About</li></a>
           <a href="/advertise"><li>Advertise</li></a>
           <a href="/contact"><li>Contact</li></a>
@@ -142,7 +142,34 @@
       </div>
     </div>
 
-    <script src="./js/about.js" type="module"></script>
+    <script>
+      const barsBtn = document.querySelector('#bars');
+const closeBtn = document.querySelector('#close');
+const deskDOM = document.querySelector('.desk');
+
+barsBtn.addEventListener('click', () => {
+  deskDOM.classList.toggle('show');
+  barsBtn.style.display = 'none';
+  closeBtn.classList.toggle('show');
+});
+
+closeBtn.addEventListener('click', () => {
+  closeBtn.classList.remove('show');
+  barsBtn.style.display = 'block';
+  deskDOM.classList.remove('show');
+});
+
+let date3 = new Date();
+const footerYearDOM = document.querySelector('.footer-year');
+const footerYear = date3.getFullYear();
+date3 = date3.toLocaleString();
+footerYearDOM.textContent = footerYear;
+
+const timeDOM = document.querySelector('.time');
+
+timeDOM.innerHTML = `<li>${date3}</li>`;
+
+    </script>
 
     <!-- in page ads -->
     <!-- <script>

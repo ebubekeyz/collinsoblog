@@ -57,14 +57,13 @@ Variables
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
-    url('https://res.cloudinary.com/dsrtdywmf/image/upload/v1699196892/collinsoblog/tmp-1-1699196887387_of0rfk.jpg')
-      center/cover;
-  background-color: #18181b;
-  background-attachment: fixed;
-  width: 100%;
+  background:white;
+  background-position: fixed;
+  background-repeat: no-repeat;
+ width: 100%;
+ 
   height: 100%;
-  color: var(--clr-grey-1);
+  color: black;
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -131,11 +130,7 @@ p {
 .text-slanted {
   font-family: 'Kaushan Script', cursive;
 }
-.section-center {
-  width: 95vw;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
+
 .section {
   padding: 5rem 0;
 }
@@ -195,27 +190,19 @@ p {
 }
 
 /*
-  =============== 
-  Start
-  ===============
-  */
+=============== 
+Start
+===============
+*/
 .top-header {
   background: var(--clr-black);
   color: var(--clr-grey-10);
   font-family: 'Courier New', Courier, monospace;
-  position: fixed;
-  top:0;
-  left: 0;
-  right: 0;
+  padding: 0.3rem 1rem;
 }
 
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0;
-  z-index: 100;
-}
+
+
 .time,
 .info {
   display: flex;
@@ -236,8 +223,7 @@ p {
 .time li {
   margin-left: 1rem;
   font-weight: 700;
-  color: yellow;
-  animation: change 2s linear infinite;
+  color: var(--clr-grey-9);
 }
 
 @keyframes change {
@@ -266,17 +252,16 @@ p {
 }
 .mobile-view {
   display: flex;
-  background: rgba(255, 255, 255, 0.938);
+  background: rgba(240, 238, 238, 0.938);
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  margin: 2rem auto;
-  margin-bottom: 2rem;
+
   height: 4rem;
 }
 
 .desk {
-  background: rgba(238, 11, 11, 0.3);
+  background: rgb(101, 99, 99);
   display: none;
   transition: var(--transition);
 }
@@ -299,6 +284,35 @@ p {
 .menu a li:hover {
   background: var(--clr-grey-10);
   color: black;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.input-control {
+  width: 100%;
+  padding: 0.3rem 1rem;
+  border: none;
+  border-radius: 5rem;
+  margin-right: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 2rem;
+  display: none;
+  transition: var(--transition);
+}
+
+.input-control:focus {
+  outline: none;
+}
+#submit {
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+  color: var(--clr-primary-3);
+  cursor: pointer;
 }
 
 .socials {
@@ -324,7 +338,9 @@ p {
   .mobile-view {
     height: 8rem;
   }
-
+  .bars {
+    display: none;
+  }
   .desk {
     display: flex;
     justify-content: space-around;
@@ -386,6 +402,8 @@ p {
     padding: 0;
   }
 }
+
+
 
 .banner-img {
   position: relative;
@@ -610,4 +628,52 @@ align-items: flex-start;
 
 .show {
   display: block;
+}
+
+
+
+
+.home a {
+  color: black;
+}
+.single-section {
+  background: #e9e9e9;
+  padding: 1rem 1rem;
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.single-section p {
+  font-style: normal;
+  text-align: justify;
+}
+
+.fb-share {
+  padding: 0 1rem;
+}
+#comment-input, #comment-btn {
+  margin: 0 1rem;
+  width: 94%;
+  max-width: 50rem;
+}
+
+#comment-info {
+  margin: 0 1rem;
+}
+
+#comment-input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #6a6868;
+}
+#comment-input:focus {
+  outline: none;
+}
+
+.sing p {
+  color: black;
+  
 }

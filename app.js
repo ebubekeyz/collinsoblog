@@ -64,9 +64,7 @@ app.use('/api/v1/subscribe', subscribeRouter)
 app.get('/about', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/about.html'))
 })
-app.get('/privacy', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './public/privacy.html'))
-})
+
 app.get('/advertise', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public/advertise.html'))
 })

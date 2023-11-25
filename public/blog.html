@@ -13,7 +13,7 @@
       name="keywords"
       content="news, bank products, food bank, make money, fintech, insurance, events, products, advertise"
     />
-    <meta name="robots" content="noindex, nofollow" />
+   
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <meta name="author" content="Collins Ojete" />
@@ -66,7 +66,7 @@
       <div class="mobile section-center">
         <div class="other">
           <div class="mobile-view">
-            <img src="./logo/logo.png" class="logo img" alt="logo" />
+            <a href="/"><img src="./logo/logo.png" class="logo img" alt="logo" /></a>
             <span class="bars" id="bars"><i class="fas fa-bars"></i></span>
             <span class="close bars" id="close"
               ><i class="fa-solid fa-xmark"></i
@@ -179,7 +179,7 @@
           <span class="footer-year"></span>
         </span>
         <ul class="footer-info">
-          <a href="/privacy"><li>Privacy</li></a>
+       
           <a href="/about"><li>About</li></a>
           <a href="/advertise"><li>Advertise</li></a>
           <a href="/contact"><li>Contact</li></a>
@@ -187,7 +187,41 @@
       </div>
     </div>
 
-    <script src="./js/blog.js" type="module"></script>
+    <script>
+      const barsBtn = document.querySelector('#bars');
+const closeBtn = document.querySelector('#close');
+const deskDOM = document.querySelector('.desk')
+
+barsBtn.addEventListener('click', () => {
+    deskDOM.classList.toggle('show');
+    barsBtn.style.display = 'none';
+    closeBtn.classList.toggle('show')
+})
+
+closeBtn.addEventListener('click', () => {
+    closeBtn.classList.remove('show')
+    barsBtn.style.display = 'block'
+    deskDOM.classList.remove('show')
+})
+
+
+const submitBtn = document.querySelector('#submit');
+const inputControl = document.querySelector('.input-control')
+
+submitBtn.addEventListener('click', () => {
+    inputControl.classList.add('show')
+})
+
+let date3 = new Date()
+const footerYearDOM = document.querySelector('.footer-year')
+const footerYear = date3.getFullYear()
+date3 = date3.toLocaleString()
+footerYearDOM.textContent = footerYear;
+
+const timeDOM = document.querySelector('.time')
+
+timeDOM.innerHTML = `<li>${date3}</li>`
+    </script>
 
     <script>
       (function(options){

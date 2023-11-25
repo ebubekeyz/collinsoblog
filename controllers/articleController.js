@@ -14,7 +14,7 @@ const createArticle = async(req, res) => {
 }
 
 const getAllArticle = async(req, res) => {
-    const article = await Article.find({}).populate({
+    const article = await Article.find({}).sort('-createdAt').populate({
         path: 'user',
         select: 'name email phone tiktok facebook image'
     })
