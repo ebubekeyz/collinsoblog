@@ -366,7 +366,7 @@
 
                             <div class="file">
                               <span>Upload Video</span>
-                              <input type="file" class="file-input-video"  accept="video/*" id="video">
+                              <input type="file" class="file-input-video"  accept="video/*" id="video2">
                           </div>
     
     
@@ -1154,6 +1154,7 @@ const titleInput2 = document.querySelector('#title2')
 const descInput2 = document.querySelector('#desc2')
 // const categoryInput2 = document.querySelector('#category2')
 const imageInput2 = document.querySelector('#image2')
+const videoInput2 = document.querySelector('#video2')
 
 
 
@@ -1162,7 +1163,7 @@ const imageInput2 = document.querySelector('#image2')
  let imageValue;
 imageInput.addEventListener('change', async (e) => {
   const imageFile = e.target.files[0];
-
+  console.log(imageFile);
   const formData = new FormData();
   console.log(formData);
   formData.append('image', imageFile);
@@ -1192,7 +1193,7 @@ imageInput.addEventListener('change', async (e) => {
 let vidValue;
 videoInput.addEventListener('change', async (e) => {
   const videoFile = e.target.files[0];
-
+  console.log(videoFile);
   const formData = new FormData();
   console.log(formData);
   formData.append('video', videoFile);
@@ -1204,10 +1205,10 @@ videoInput.addEventListener('change', async (e) => {
       },
     });
 
-    videoValue = src;
-    console.log(videoValue);
+    vidValue = src;
+    console.log(vidValue);
   } catch (error) {
-    videoValue = null;
+    vidValue = null;
     console.log(error);
   }
 });
@@ -1220,7 +1221,7 @@ form.addEventListener('submit', async (e) => {
   let image = imageInput.value;
   let video = videoInput.value;
 
-  video = videoValue;
+  video = vidValue;
 
   try {
     const info = { title, description, category, image, video };
@@ -1253,6 +1254,7 @@ form.addEventListener('submit', async (e) => {
 const params2 = window.location.search;
 const urlID = new URLSearchParams(params2).get('id');
 
+let  imageValue2;
 imageInput2.addEventListener('change', async (e) => {
   const imageFile = e.target.files[0];
 
@@ -1271,10 +1273,34 @@ imageInput2.addEventListener('change', async (e) => {
       },
     });
 
-    imageValue = src;
-    console.log(imageValue);
+    imageValue2 = src;
+    console.log(imageValue2);
   } catch (error) {
-    imageValue = null;
+    imageValue2 = null;
+    console.log(error);
+  }
+});
+
+
+
+let vidValue2;
+videoInput2.addEventListener('change', async (e) => {
+  const videoFile = e.target.files[0];
+  const formData = new FormData();
+  console.log(formData);
+  formData.append('video', videoFile);
+ 
+  try {
+    const {data: {video: { src }} } = await axios.post('/api/v1/article/uploadVideoCloud', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+
+    vidValue2 = src;
+    console.log(vidValue2);
+  } catch (error) {
+    vidValue2 = null;
     console.log(error);
   }
 });
@@ -1285,11 +1311,13 @@ form2.addEventListener('submit', async (e) => {
   const description = descInput2.value;
   const category = categoryInput2.value;
   let image = imageInput2.value;
+  let video = videoInput2.value;
 
-  image = imageValue;
+  image = imageValue2;
+  video = vidValue2;
 
   try {
-    const info = { title, description, category, image };
+    const info = { title, description, category, image, video };
     subBtn2.innerHTML = `<div class="loading"></div>`;
 
     const response = await fetch(`/api/v1/article/${urlID}`, {

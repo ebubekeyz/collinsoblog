@@ -356,7 +356,7 @@
     
                             <div class="file">
                               <span>Upload Video</span>
-                              <input type="file" class="file-input-video"  accept="video/*" id="video">
+                              <input type="file" class="file-input-video"  accept="video/*" id="video2">
                           </div>
     
                             <button type="submit" class="sub-btn btn" id="sub-btn2">
@@ -1082,16 +1082,21 @@ const videoInput = document.querySelector('#video')
 
 
 
- let imageValue;
+
+let imageValue;
 imageInput.addEventListener('change', async (e) => {
   const imageFile = e.target.files[0];
-
+  console.log(imageFile);
   const formData = new FormData();
   console.log(formData);
   formData.append('image', imageFile);
  
   try {
-    const {data: {image: { src }} } = await axios.post('/api/v1/article/uploadImageCloud', formData, {
+    const {
+      data: {
+        image: { src },
+      },
+    } = await axios.post('/api/v1/article/uploadImageCloud', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -1105,51 +1110,13 @@ imageInput.addEventListener('change', async (e) => {
   }
 });
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const title = titleInput.value;
-  const description = descInput.value;
-  const category = categoryInput.value;
-  let image = imageInput.value;
-
-  image = imageValue;
-
-  try {
-    const info = { title, description, category, image };
-    subBtn.innerHTML = `<div class="loading"></div>`;
-
-    const response = await fetch('/api/v1/article', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(info),
-    });
-
-    const data = await response.json();
-
-    if (response.status === 201) {
-      titleInput.value = '';
-      descInput.value = '';
-      categoryInput.value = '';
-      imageInput.value = '';
-      subBtn.textContent = 'Post Added';
-    }
-  } catch (error) {
-    console.log(data.msg);
-    subBtn.textContent = 'Add Post';
-  }
-});
 
 
 
-
-
-
-let videoValue;
+let vidValue;
 videoInput.addEventListener('change', async (e) => {
   const videoFile = e.target.files[0];
-
+  console.log(videoFile);
   const formData = new FormData();
   console.log(formData);
   formData.append('video', videoFile);
@@ -1161,10 +1128,10 @@ videoInput.addEventListener('change', async (e) => {
       },
     });
 
-    videoValue = src;
-    console.log(videoValue);
+    vidValue = src;
+    console.log(vidValue);
   } catch (error) {
-    videoValue = null;
+    vidValue = null;
     console.log(error);
   }
 });
@@ -1177,8 +1144,7 @@ form.addEventListener('submit', async (e) => {
   let image = imageInput.value;
   let video = videoInput.value;
 
-  image = imageValue;
-  video = videoValue
+  video = vidValue;
 
   try {
     const info = { title, description, category, image, video };
@@ -1199,7 +1165,6 @@ form.addEventListener('submit', async (e) => {
       descInput.value = '';
       categoryInput.value = '';
       imageInput.value = '';
-      videoInput.value = '';
       subBtn.textContent = 'Post Added';
     }
   } catch (error) {
